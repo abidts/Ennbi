@@ -37,10 +37,10 @@ const Navbar: React.FC = () => {
           <a href="#home" className="flex items-center space-x-2">
 {/*             <span className="font-display text-2xl font-bold text-white">Ennbi</span>
             <span className="font-display text-accent-400">Softwares</span> */}
-            <span className="font-display text-2xl font-bold bg-gradient-to-r from-black via-gray-900 to-red-700 bg-clip-text text-transparent drop-shadow-[0_0_5px_rgba(255,0,0,0.4)]">
-  Ennbi
+            <span className="font-display text-2xl md:text-3xl font-extrabold bg-gradient-to-r from-black via-gray-900 to-red-700 bg-clip-text text-transparent drop-shadow-[0_0_6px_rgba(255,0,0,0.5)]">
+  ENNBI SOFTWARES
 </span>
-<span className="font-display text-2xl font-bold text-white">Softwares</span>
+
 
           </a>
 
