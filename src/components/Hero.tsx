@@ -11,8 +11,10 @@ const Hero: React.FC = () => {
       </div>
 
       <div className="relative container mx-auto px-4 h-screen flex items-center justify-center">
-        <div className="text-center max-w-4xl mx-auto">
-          <h1 className="text-5xl md:text-7xl font-bold mb-8">
+         <div className="text-center max-w-4xl mx-auto mt-16"> {/* Added mt-16 */}
+    <h1 className="text-5xl md:text-7xl font-bold mb-8">
+{/*         <div className="text-center max-w-4xl mx-auto">
+          <h1 className="text-5xl md:text-7xl font-bold mb-8"> */}
             Transform Your Business With
             <span className="block text-gradient">Next-Gen Technology</span>
           </h1>
