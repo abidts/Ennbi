@@ -32,14 +32,10 @@ const About: React.FC = () => {
           </div>
           
           <div className="md:w-1/2">
-{/*             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              About <span className="text-blue-900">Ennbi Softwares</span>
-            </h2> */}
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-  About <span className="bg-gradient-to-r from-black via-gray-250 to-red-500 bg-clip-text text-transparent font-extrabold">
-    Ennbi Softwares
-  </span>
-</h2>
+              About <span className="text-blue-900">Ennbi Softwares</span>
+            </h2>
+
             <div className="h-1 w-20 bg-blue-500 mb-6"></div>
             <p className="text-gray-700 mb-6">
               Founded in 2022, Ennbi Softwares has grown from a small team of passionate developers into a full-service software development company trusted by businesses worldwide.
