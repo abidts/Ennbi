@@ -36,7 +36,7 @@ const About: React.FC = () => {
               About <span className="text-blue-900">Ennbi Softwares</span>
             </h2> */}
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-  About <span className="bg-gradient-to-r from-black via-gray-900 to-red-700 bg-clip-text text-transparent font-extrabold">
+  About <span className="bg-gradient-to-r from-black via-gray-250 to-red-500 bg-clip-text text-transparent font-extrabold">
     Ennbi Softwares
   </span>
 </h2>
