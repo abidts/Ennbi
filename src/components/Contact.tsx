@@ -107,7 +107,7 @@ const Contact: React.FC = () => {
                   </div>
                   <div>
                     <h4 className="text-lg font-bold text-gray-900 mb-1">Office Address</h4>
-                    <p className="text-gray-700">123 Tech Park, Silicon Valley<br />San Francisco, CA 94103</p>
+                    <p className="text-gray-700">Habak Naseem Bagh Hazratbal Srinagar <br />JAMMU & KASHMIR, PIN 190006</p>
                   </div>
                 </div>
                 
@@ -119,8 +119,8 @@ const Contact: React.FC = () => {
                   </div>
                   <div>
                     <h4 className="text-lg font-bold text-gray-900 mb-1">Email Us</h4>
-                    <p className="text-gray-700">info@ennbisoftwares.com</p>
-                    <p className="text-gray-700">support@ennbisoftwares.com</p>
+                    <p className="text-gray-700">hr@ennbi.com</p>
+                    <p className="text-gray-700">www.ennbi.com</p>
                   </div>
                 </div>
                 
@@ -132,8 +132,8 @@ const Contact: React.FC = () => {
                   </div>
                   <div>
                     <h4 className="text-lg font-bold text-gray-900 mb-1">Call Us</h4>
-                    <p className="text-gray-700">+1 (555) 123-4567</p>
-                    <p className="text-gray-700">+1 (555) 987-6543</p>
+                    <p className="text-gray-700">+91 7006016082</p>
+                    <p className="text-gray-700">+91 7006016082</p>
                   </div>
                 </div>
               </div>
