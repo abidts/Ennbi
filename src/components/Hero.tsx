@@ -34,8 +34,8 @@ const Hero: React.FC = () => {
 
       <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-white text-center">
 {/*       <p className="text-sm mb-2 text-gray-400">Scroll to explore</p> */}
-        <div className="w-6 h-10 border-2 border-gray-400 rounded-full flex justify-center p-1">
-          <div className="w-1 bg-gray-400 rounded-full animate-scroll-down"></div>
+{/*         <div className="w-6 h-10 border-2 border-gray-400 rounded-full flex justify-center p-1">
+          <div className="w-1 bg-gray-400 rounded-full animate-scroll-down"></div> */}
         </div>
       </div>
     </section>
