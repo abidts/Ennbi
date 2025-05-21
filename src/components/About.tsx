@@ -15,15 +15,15 @@ const About: React.FC = () => {
                     <p className="text-gray-600">Years Experience</p>
                   </div>
                   <div className="bg-blue-50 p-4 rounded-lg text-center">
-                    <h3 className="text-4xl font-bold text-blue-900">200+</h3>
+                    <h3 className="text-4xl font-bold text-blue-900">50+</h3>
                     <p className="text-gray-600">Projects Delivered</p>
                   </div>
                   <div className="bg-blue-50 p-4 rounded-lg text-center">
-                    <h3 className="text-4xl font-bold text-blue-900">50+</h3>
+                    <h3 className="text-4xl font-bold text-blue-900">10+</h3>
                     <p className="text-gray-600">Team Members</p>
                   </div>
                   <div className="bg-blue-50 p-4 rounded-lg text-center">
-                    <h3 className="text-4xl font-bold text-blue-900">95%</h3>
+                    <h3 className="text-4xl font-bold text-blue-900">99.9%</h3>
                     <p className="text-gray-600">Client Satisfaction</p>
                   </div>
                 </div>
