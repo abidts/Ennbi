@@ -41,9 +41,16 @@ const Navbar: React.FC = () => {
 {/*             <span className="font-display text-2xl md:text-3xl font-extrabold bg-gradient-to-r from-black via-gray-900 to-red-700 bg-clip-text text-transparent drop-shadow-[0_0_6px_rgba(255,0,0,0.5)]">
   ENNBI SOFTWARES
 </span> */}
-            <span className="font-display text-2xl md:text-3xl font-extrabold bg-gradient-to-r from-black via-gray-900 to-red-700 bg-clip-text text-transparent drop-shadow-[0_0_6px_rgba(255,0,0,0.5)] hover:animate-pulse">
+//             <span className="font-display text-2xl md:text-3xl font-extrabold bg-gradient-to-r from-black via-gray-900 to-red-700 bg-clip-text text-transparent drop-shadow-[0_0_6px_rgba(255,0,0,0.5)] hover:animate-pulse">
+//   ENNBI SOFTWARES
+// </span>
+
+  <span
+  className="text-4xl md:text-6xl font-cursive bg-gradient-to-r from-[#6a11cb] via-[#2575fc] to-[#ff416c] bg-clip-text text-transparent drop-shadow-[0_0_10px_rgba(255,64,129,0.7)] animate-pulse transition-all duration-500 ease-in-out"
+>
   ENNBI SOFTWARES
 </span>
+
 
 
 
