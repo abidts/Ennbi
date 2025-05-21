@@ -12,6 +12,9 @@ const Hero: React.FC = () => {
 
       <div className="relative container mx-auto px-4 h-screen flex items-center justify-center">
         <div className="text-center max-w-4xl mx-auto">
+          <h2 className="text-2xl md:text-3xl font-bold text-center text-blue-600 mb-4">
+  ENNBI SOFTWARES
+</h2>
           <h1 className="text-5xl md:text-7xl font-bold mb-8">
             Transform Your Business With
             <span className="block text-gradient">Next-Gen Technology</span>
