@@ -1,3 +1,7 @@
+import React from "react";
+
+const Packages: React.FC = () => {
+  return (
 <section id="packages" className="py-16 bg-gray-100">
   <div className="container mx-auto px-4">
     <h2 className="text-4xl font-bold text-center mb-8">WEBSITES / APPS</h2>
@@ -35,3 +39,4 @@
     </div>
   </div>
 </section>
+    export default Packages;
