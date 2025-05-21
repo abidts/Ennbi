@@ -8,7 +8,9 @@ import Portfolio from './components/Portfolio';
 import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import Packages from "./components/Packages";
 import './index.css';
+
 
 function App() {
   useEffect(() => {
