@@ -36,14 +36,7 @@ const Navbar: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
           <a href="#home" className="flex items-center space-x-2">
-{/*             <span className="font-display text-2xl font-bold text-white">Ennbi</span>
-            <span className="font-display text-accent-400">Softwares</span> */}
-{/*             <span className="font-display text-2xl md:text-3xl font-extrabold bg-gradient-to-r from-black via-gray-900 to-red-700 bg-clip-text text-transparent drop-shadow-[0_0_6px_rgba(255,0,0,0.5)]">
-  ENNBI SOFTWARES
-</span> */}
-//             <span className="font-display text-2xl md:text-3xl font-extrabold bg-gradient-to-r from-black via-gray-900 to-red-700 bg-clip-text text-transparent drop-shadow-[0_0_6px_rgba(255,0,0,0.5)] hover:animate-pulse">
-//   ENNBI SOFTWARES
-// </span>
+
 
   <span
   className="text-4xl md:text-6xl font-cursive bg-gradient-to-r from-[#6a11cb] via-[#2575fc] to-[#ff416c] bg-clip-text text-transparent drop-shadow-[0_0_10px_rgba(255,64,129,0.7)] animate-pulse transition-all duration-500 ease-in-out"
