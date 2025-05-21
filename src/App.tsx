@@ -63,6 +63,7 @@ function App() {
       <Services />
       <WhyChooseUs />
       <Portfolio />
+      <Packages />
       <Testimonials />
       <Contact />
       <Footer />
