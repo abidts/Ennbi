@@ -1,15 +1,4 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
-  theme: {
-    extend: {
-      fontFamily: {
-        cursive: ['"Great Vibes"', 'cursive'],
-      },
-    },
-  },
-  plugins: [],
-};
-
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
