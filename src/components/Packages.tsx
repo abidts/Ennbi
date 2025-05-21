@@ -40,5 +40,4 @@ const Packages: React.FC = () => {
   </div>
 </section>
 
-    
     export default Packages;
