@@ -75,7 +75,7 @@ export const projects: ProjectType[] = [
 export const testimonials: TestimonialType[] = [
   {
     id: 1,
-    name: "Chasfida",
+    name: "Mr Shahnawaz",
     position: "Business Owner",
     company: "Heritage Craft.",
     quote: "Ennbi Softwares delivered beyond our expectations. Their expertise in cloud solutions has transformed our operations and improved efficiency by 40%.",
