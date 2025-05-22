@@ -34,7 +34,7 @@ const packages = [
     price: "Starting at ₹35,000",
     description: "Convert websites to mobile apps or build native solutions",
     image:
-      "https://images.pexels.com/photos/6078122/pexels-photo-6078122.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=300&w=600",
+      "https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=300&w=600",
   },
 ];
 
