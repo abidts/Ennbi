@@ -198,7 +198,11 @@ const Contact: React.FC = () => {
                   <p>We have received your inquiry and will get back to you shortly.</p>
                 </div>
               ) : (
-               <form onSubmit={handleSubmit}>
+               // <form onSubmit={handleSubmit}>
+      <form
+  action="https://formspree.io/f/xzzrqaly"  
+  method="POST"
+>
   <div className="mb-6">
     <label htmlFor="name" className="block text-gray-700 font-medium mb-2">Full Name *</label>
     <input
