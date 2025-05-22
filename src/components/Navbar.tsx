@@ -14,87 +14,59 @@ const Navbar: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
-
-  const navLinks = [
-    { name: 'Home', href: '#home' },
-    { name: 'About', href: '#about' },
-    { name: 'Services', href: '#services' },
-    { name: 'Why Us', href: '#why-us' },
-    { name: 'Portfolio', href: '#portfolio' },
-    { name: 'Testimonials', href: '#testimonials' },
-     { name: 'Packages', href: '#packages' }, 
-    { name: 'Contact', href: '#contact' },
-  ];
-
   return (
     <nav className={`fixed w-full z-50 transition-all duration-500 ${
-      isScrolled ? 'glass-card py-2' : 'py-4'
+      isScrolled ? 'py-4 bg-black/80 backdrop-blur-lg' : 'py-6'
     }`}>
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
-          <a href="#home" className="flex items-center space-x-2">
-
-
-  <span
-  className="text-4xl md:text-6xl font-cursive bg-gradient-to-r from-[#6a11cb] via-[#2575fc] to-[#ff416c] bg-clip-text text-transparent drop-shadow-[0_0_10px_rgba(255,64,129,0.7)] animate-pulse transition-all duration-500 ease-in-out"
->
-  ENNBI SOFTWARES
-</span>
-
-
-
-
+          <a href="#home" className="relative group">
+            <span className="absolute -inset-1 bg-gradient-to-r from-white/20 to-transparent rounded-lg blur opacity-0 group-hover:opacity-100 transition-opacity duration-500"></span>
+            <h1 className="relative text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-white/50 tracking-tight">
+              ENNBI
+            </h1>
           </a>
 
           <div className="hidden md:flex space-x-8">
-            {navLinks.map((link) => (
+            {['Home', 'About', 'Services', 'Portfolio', 'Contact'].map((item) => (
               <a
-                key={link.name}
-                href={link.href}
-                className="text-gray-300 hover:text-white transition-colors duration-300"
+                key={item}
+                href={`#${item.toLowerCase()}`}
+                className="text-white/70 hover:text-white transition-colors duration-300 relative group"
               >
-                {link.name}
+                <span className="absolute -bottom-1 left-0 w-0 h-px bg-white transition-all duration-300 group-hover:w-full"></span>
+                {item}
               </a>
             ))}
           </div>
 
           <div className="md:hidden">
             <button
-              onClick={toggleMenu}
+              onClick={() => setIsOpen(!isOpen)}
               className="text-white p-2"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
         </div>
-      </div>
 
-      {isOpen && (
-        <div className="md:hidden glass-card absolute top-full left-0 right-0 py-4">
-          <div className="container mx-auto px-4 flex flex-col space-y-4">
-            {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                onClick={() => setIsOpen(false)}
-                className="text-gray-300 hover:text-white transition-colors duration-300"
-              >
-                {link.name}
-              </a>
-            ))}
-            <a 
-              href="#contact"
-              onClick={() => setIsOpen(false)}
-              className="btn-accent inline-block text-center"
-            >
-              Get Started
-            </a>
+        {isOpen && (
+          <div className="md:hidden absolute top-full left-0 right-0 bg-black/95 backdrop-blur-lg py-4">
+            <div className="container mx-auto px-4 flex flex-col space-y-4">
+              {['Home', 'About', 'Services', 'Portfolio', 'Contact'].map((item) => (
+                <a
+                  key={item}
+                  href={`#${item.toLowerCase()}`}
+                  onClick={() => setIsOpen(false)}
+                  className="text-white/70 hover:text-white transition-colors duration-300 py-2"
+                >
+                  {item}
+                </a>
+              ))}
+            </div>
           </div>
-        </div>
-      )}
+        )}
+      </div>
     </nav>
   );
 };
