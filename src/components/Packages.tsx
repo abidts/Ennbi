@@ -6,35 +6,35 @@ const packages = [
     price: "Starting at ₹5,000",
     description: "Perfect for simple portfolio or business presence",
     image:
-      "https://images.pexels.com/photos/11035371/pexels-photo-11035371.jpeg?auto=compress&cs=tinysrgb&h=140",
+      "https://images.pexels.com/photos/6476269/pexels-photo-6476269.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=300&w=600",
   },
   {
     title: "Dynamic Website",
     price: "Starting at ₹15,000",
     description: "Database-driven websites with CMS features",
     image:
-      "https://images.pexels.com/photos/270404/pexels-photo-270404.jpeg?auto=compress&cs=tinysrgb&h=140",
+      "https://images.pexels.com/photos/6476258/pexels-photo-6476258.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=300&w=600",
   },
   {
     title: "Customized Website",
     price: "Starting at ₹25,000",
     description: "Tailored features and unique designs",
     image:
-      "https://images.pexels.com/photos/6476584/pexels-photo-6476584.jpeg?auto=compress&cs=tinysrgb&h=140",
+      "https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=300&w=600",
   },
   {
     title: "E-Commerce App",
     price: "Starting at ₹30,000",
     description: "Online shopping with product and payment management",
     image:
-      "https://images.pexels.com/photos/5632399/pexels-photo-5632399.jpeg?auto=compress&cs=tinysrgb&h=140",
+      "https://images.pexels.com/photos/5632403/pexels-photo-5632403.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=300&w=600",
   },
   {
     title: "Web View / Native App",
     price: "Starting at ₹35,000",
     description: "Convert websites to mobile apps or build native solutions",
     image:
-      "https://images.pexels.com/photos/1181300/pexels-photo-1181300.jpeg?auto=compress&cs=tinysrgb&h=140",
+      "https://images.pexels.com/photos/6078122/pexels-photo-6078122.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=300&w=600",
   },
 ];
 
@@ -54,7 +54,7 @@ const Packages: React.FC = () => {
               <img
                 src={pkg.image}
                 alt={pkg.title}
-                className="w-full h-40 object-cover"
+                className="w-full h-48 object-cover"
               />
               <div className="p-6 text-center">
                 <h3 className="text-xl font-semibold mb-2 text-primary-600">
