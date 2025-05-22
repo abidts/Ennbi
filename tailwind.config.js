@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 // tailwind.config.js
 export default {
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
       fontFamily: {
@@ -9,28 +10,23 @@ export default {
       },
       colors: {
         primary: {
-          50: '#f0f9ff',
-          100: '#e0f2fe',
-          200: '#bae6fd',
-          300: '#7dd3fc',
-          400: '#38bdf8',
-          500: '#0ea5e9',
-          600: '#0284c7',
-          700: '#0369a1',
-          800: '#075985',
-          900: '#0c4a6e',
+          // ... your primary colors
         },
         accent: {
-          50: '#fdf4ff',
-          100: '#fae8ff',
-          200: '#f5d0fe',
-          300: '#f0abfc',
-          400: '#e879f9',
-          500: '#d946ef',
-          600: '#c026d3',
-          700: '#a21caf',
-          800: '#86198f',
-          900: '#701a75',
+          // ... your accent colors
+        },
+        // 🔥 Add this radiant color scale
+        radiant: {
+          50: '#f0f5ff',
+          100: '#dbe8ff',
+          200: '#adc8ff',
+          300: '#7eaaff',
+          400: '#4f8cff',
+          500: '#266dff',
+          600: '#0054e6',
+          700: '#0041b3',
+          800: '#003080',
+          900: '#00204d',
         },
       },
       animation: {
@@ -44,10 +40,12 @@ export default {
         },
       },
       backgroundImage: {
-        'hero-pattern': "url('https://images.pexels.com/photos/3075993/pexels-photo-3075993.jpeg')",
+        'hero-pattern':
+          "url('https://images.pexels.com/photos/3075993/pexels-photo-3075993.jpeg')",
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
       },
     },
   },
   plugins: [],
 };
+
