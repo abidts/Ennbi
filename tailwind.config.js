@@ -1,40 +1,41 @@
 /** @type {import('tailwindcss').Config} */
+// tailwind.config.js
 export default {
-  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
-      colors: {
-        radiant: {
-          50: '#e6f3ff',
-          100: '#cce7ff',
-          200: '#99cfff',
-          300: '#66b7ff',
-          400: '#339fff',
-          500: '#0087ff',  // Primary radiant blue
-          600: '#006ccc',
-          700: '#005199',
-          800: '#003666',
-          900: '#001b33',
-        },
-        tango: {
-          50: '#e6f0ff',
-          100: '#cce1ff',
-          200: '#99c3ff',
-          300: '#66a5ff',
-          400: '#3387ff',
-          500: '#0069ff',  // Primary tango blue
-          600: '#0054cc',
-          700: '#003f99',
-          800: '#002a66',
-          900: '#001533',
-        },
-      },
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
+        sans: ['Poppins', 'sans-serif'],
+        display: ['Space Grotesk', 'sans-serif'],
+      },
+      colors: {
+        primary: {
+          50: '#f0f9ff',
+          100: '#e0f2fe',
+          200: '#bae6fd',
+          300: '#7dd3fc',
+          400: '#38bdf8',
+          500: '#0ea5e9',
+          600: '#0284c7',
+          700: '#0369a1',
+          800: '#075985',
+          900: '#0c4a6e',
+        },
+        accent: {
+          50: '#fdf4ff',
+          100: '#fae8ff',
+          200: '#f5d0fe',
+          300: '#f0abfc',
+          400: '#e879f9',
+          500: '#d946ef',
+          600: '#c026d3',
+          700: '#a21caf',
+          800: '#86198f',
+          900: '#701a75',
+        },
       },
       animation: {
+        'scroll-down': 'scroll-down 1.5s ease-in-out infinite',
         float: 'float 6s ease-in-out infinite',
-        'bounce-soft': 'bounce 1.5s infinite',
       },
       keyframes: {
         float: {
@@ -42,9 +43,9 @@ export default {
           '50%': { transform: 'translateY(-20px)' },
         },
       },
-      transitionTimingFunction: {
-        'bounce-in': 'cubic-bezier(0.68, -0.55, 0.265, 1.55)',
-        'smooth-out': 'cubic-bezier(0.4, 0, 0.2, 1)',
+      backgroundImage: {
+        'hero-pattern': "url('https://images.pexels.com/photos/3075993/pexels-photo-3075993.jpeg')",
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
       },
     },
   },
