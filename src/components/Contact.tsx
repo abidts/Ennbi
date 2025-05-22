@@ -208,7 +208,7 @@ const Contact: React.FC = () => {
       required
       value={formData.name}
       onChange={handleChange}
-      className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 ${
+      className={`w-full px-4 py-3 border rounded-lg text-black  focus:outline-none focus:ring-2 ${
         errors.name ? 'border-red-500 focus:ring-red-200' : 'border-gray-300 focus:ring-blue-200'
       }`}
       placeholder="Enter your name"
@@ -224,7 +224,7 @@ const Contact: React.FC = () => {
       required
       value={formData.email}
       onChange={handleChange}
-      className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 ${
+      className={`w-full px-4 py-3 border rounded-lg text-black  focus:outline-none focus:ring-2 ${
         errors.email ? 'border-red-500 focus:ring-red-200' : 'border-gray-300 focus:ring-blue-200'
       }`}
       placeholder="Enter your email"
@@ -240,7 +240,7 @@ const Contact: React.FC = () => {
       required
       value={formData.phone}
       onChange={handleChange}
-      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-200"
+      className="w-full px-4 py-3 border border-gray-300 rounded-lg text-black  focus:outline-none focus:ring-2 focus:ring-blue-200"
       placeholder="Enter your phone number"
     />
   </div>
@@ -254,7 +254,7 @@ const Contact: React.FC = () => {
       value={formData.message}
       onChange={handleChange}
       rows={5}
-      className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 ${
+      className={`w-full px-4 py-3 border rounded-lg text-black  focus:outline-none focus:ring-2 ${
         errors.message ? 'border-red-500 focus:ring-red-200' : 'border-gray-300 focus:ring-blue-200'
       }`}
       placeholder="Tell us about your project"
