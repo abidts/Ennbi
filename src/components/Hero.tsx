@@ -1,80 +1,46 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 
 const Hero: React.FC = () => {
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Animated background elements */}
-      <div className="absolute inset-0">
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 0.2 }}
-          transition={{ duration: 2 }}
-          className="absolute inset-0"
-        >
-          <div className="absolute top-0 left-0 w-96 h-96 bg-radiant-500/20 rounded-full filter blur-3xl"></div>
-          <div className="absolute bottom-0 right-0 w-96 h-96 bg-tango-500/20 rounded-full filter blur-3xl"></div>
-        </motion.div>
+    <section
+      id="home"
+      className="relative min-h-screen overflow-hidden bg-gradient-to-br from-neon-pink via-neon-blue to-neon-green text-white font-display"
+    >
+      <div className="absolute inset-0 bg-gradient-to-br from-pink-500/30 to-blue-500/20 blur-3xl"></div>
+
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute -right-1/4 -top-1/4 w-1/2 h-1/2 bg-pink-400/20 rounded-full blur-3xl animate-float"></div>
+        <div
+          className="absolute -left-1/4 -bottom-1/4 w-1/2 h-1/2 bg-blue-400/20 rounded-full blur-3xl animate-float"
+          style={{ animationDelay: '2s' }}
+        ></div>
       </div>
 
-      <div className="container mx-auto px-4 relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          className="text-center"
-        >
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.2 }}
-            className="text-6xl md:text-8xl font-bold mb-6"
-          >
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-radiant-400 via-tango-400 to-white/80">
-              ENNBI
-            </span>
-            <span className="block text-3xl md:text-4xl mt-4 bg-clip-text text-transparent bg-gradient-to-r from-white/90 to-white/60">
-              SOFTWARES
-            </span>
-          </motion.h1>
-
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.4 }}
-            className="text-xl md:text-2xl text-white/80 mb-12 max-w-3xl mx-auto"
-          >
-            Transform Your Business With Next-Gen Technology
-          </motion.p>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.6 }}
-            className="flex flex-col sm:flex-row gap-6 justify-center items-center"
-          >
-            <a href="#contact" className="btn-primary group">
-              Start Your Project
-              <span className="absolute inset-0 bg-white/10 transform translate-x-[-100%] skew-x-[45deg] transition-transform duration-500 group-hover:translate-x-[100%]"></span>
+      <div className="relative container mx-auto px-4 h-screen flex items-center justify-center">
+        <div className="text-center max-w-4xl mx-auto mt-24 animate-fade-in-up">
+          <h1 className="text-5xl md:text-7xl font-extrabold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-blue-400 to-green-400">
+            Transform Your Business With
+            <span className="block">Next-Gen Technology</span>
+          </h1>
+          <p className="text-xl md:text-2xl text-gray-200 mb-10 max-w-3xl mx-auto">
+            We help businesses transform their ideas into powerful software solutions. Our team delivers cutting-edge tech to power your growth.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+            <a
+              href="#contact"
+              className="bg-pink-500 hover:bg-pink-600 text-white font-semibold px-6 py-3 rounded-full shadow-lg transition duration-300"
+            >
+              Book a Free Consultation
             </a>
-            <a href="#services" className="text-white/80 hover:text-white transition-colors duration-300">
-              Explore Our Services →
+            <a
+              href="#services"
+              className="border border-white hover:bg-white hover:text-black px-6 py-3 rounded-full shadow-md transition duration-300"
+            >
+              Explore Services
             </a>
-          </motion.div>
-        </motion.div>
-      </div>
-
-      {/* Scroll indicator */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, delay: 1 }}
-        className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
-      >
-        <div className="w-6 h-10 border-2 border-white/20 rounded-full flex justify-center p-2">
-          <div className="w-1 h-3 bg-gradient-to-b from-radiant-500 to-tango-500 rounded-full animate-bounce-soft"></div>
+          </div>
         </div>
-      </motion.div>
+      </div>
     </section>
   );
 };
