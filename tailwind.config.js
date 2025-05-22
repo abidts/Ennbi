@@ -1,5 +1,4 @@
 /** @type {import('tailwindcss').Config} */
-// tailwind.config.js
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
@@ -10,12 +9,29 @@ export default {
       },
       colors: {
         primary: {
-          // ... your primary colors
+          50: '#f0f9ff',
+          100: '#e0f2fe',
+          200: '#bae6fd',
+          300: '#7dd3fc',
+          400: '#38bdf8',
+          500: '#0ea5e9',
+          600: '#0284c7',
+          700: '#0369a1',
+          800: '#075985',
+          900: '#0c4a6e',
         },
         accent: {
-          // ... your accent colors
+          50: '#fdf4ff',
+          100: '#fae8ff',
+          200: '#f5d0fe',
+          300: '#f0abfc',
+          400: '#e879f9',
+          500: '#d946ef',
+          600: '#c026d3',
+          700: '#a21caf',
+          800: '#86198f',
+          900: '#701a75',
         },
-        // 🔥 Add this radiant color scale
         radiant: {
           50: '#f0f5ff',
           100: '#dbe8ff',
@@ -27,6 +43,18 @@ export default {
           700: '#0041b3',
           800: '#003080',
           900: '#00204d',
+        },
+        tango: {
+          50: '#fff0f0',
+          100: '#ffd9d9',
+          200: '#ffb3b3',
+          300: '#ff8c8c',
+          400: '#ff6666',
+          500: '#ff3f3f',
+          600: '#e62e2e',
+          700: '#b32424',
+          800: '#801a1a',
+          900: '#4d1010',
         },
       },
       animation: {
@@ -48,4 +76,3 @@ export default {
   },
   plugins: [],
 };
-
