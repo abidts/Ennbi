@@ -56,30 +56,47 @@ const Contact: React.FC = () => {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    if (validate()) {
-      setIsSubmitting(true);
-      
-      // Simulate API call
+  const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+
+  if (!validate()) return;
+
+  setIsSubmitting(true);
+
+  try {
+    const response = await fetch("https://formspree.io/f/xzzrqaly", {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
+
+    if (response.ok) {
+      setSubmitSuccess(true);
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        message: '',
+      });
+
+      // Hide success after 5 seconds
       setTimeout(() => {
-        setIsSubmitting(false);
-        setSubmitSuccess(true);
-        setFormData({
-          name: '',
-          email: '',
-          phone: '',
-          message: '',
-        });
-        
-        // Reset success message after 5 seconds
-        setTimeout(() => {
-          setSubmitSuccess(false);
-        }, 5000);
-      }, 1500);
+        setSubmitSuccess(false);
+      }, 5000);
+    } else {
+      alert("Failed to submit. Please try again later.");
     }
-  };
+  } catch (error) {
+    console.error("Error submitting form:", error);
+    alert("Something went wrong. Please try again.");
+  } finally {
+    setIsSubmitting(false);
+  }
+};
+
 
   return (
     <section id="contact" className="py-20 bg-white">
