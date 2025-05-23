@@ -216,7 +216,8 @@ const Contact: React.FC = () => {
                 </div>
               ) : (
                // <form onSubmit={handleSubmit}>
-      <form
+     <form onSubmit={handleSubmit}>
+
   action="https://formspree.io/f/xzzrqaly"  
   method="POST"
 >
@@ -284,15 +285,21 @@ const Contact: React.FC = () => {
                     {errors.message && <p className="text-red-500 text-sm mt-1">{errors.message}</p>}
                   </div>
                   
-                  <button
-                    type="submit"
-                    className={`w-full bg-blue-900 text-white py-3 px-6 rounded-lg font-medium hover:bg-blue-800 transition-colors duration-300 ${
-                      isSubmitting ? 'opacity-70 cursor-not-allowed' : ''
-                    }`}
-                    disabled={isSubmitting}
-                  >
-                    {isSubmitting ? 'Sending...' : 'Send Message'}
-                  </button>
+                 <button
+  type="submit"
+  className="w-full bg-blue-900 text-white py-3 px-6 rounded-lg hover:bg-blue-800 transition-colors duration-300"
+  disabled={isSubmitting}
+>
+  {isSubmitting ? (
+    <svg className="animate-spin h-5 w-5 mx-auto text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
+    </svg>
+  ) : (
+    "Send Message"
+  )}
+</button>
+
                 </form>
               )}
             </div>
