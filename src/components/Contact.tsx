@@ -84,87 +84,81 @@ const Contact: React.FC = () => {
 
   return (
     <div className="max-w-4xl mx-auto p-6 bg-white shadow-xl rounded-2xl">
-  {/* 🟩 Add this section just before your form */}
-  <h2 className="text-3xl font-bold text-gray-900 mb-2">
-    Send us a message
-  </h2>
-  <p className="text-gray-600 mb-6">
-    Whether you have a question, need support, or just want to say hello — we’re here and ready to help.
-  </p>
+      {/* Header */}
+      <h2 className="text-3xl font-bold text-gray-900 mb-2">Send us a message</h2>
+      <p className="text-gray-600 mb-6">
+        Whether you have a question, need support, or just want to say hello — we’re here and ready to help.
+      </p>
 
-  {/* 🔽 Your existing contact form starts here */}
-  <form onSubmit={handleSubmit}>
-    {/* Form fields like name, email, message */}
-  </form>
-</div>
-
-    <form
-      onSubmit={handleSubmit}
-      className="space-y-6 bg-white p-6 rounded-lg shadow-md"
-    >
-      {submitSuccess && (
-        <div className="bg-green-100 text-green-800 p-4 rounded-lg">
-          <p className="font-medium">Thank you for your message!</p>
-          <p>We have received your inquiry and will get back to you shortly.</p>
-        </div>
-      )}
-
-      <input
-        type="text"
-        name="name"
-        value={formData.name}
-        onChange={handleChange}
-        required
-        className={`w-full p-3 border rounded text-black focus:outline-none focus:ring-2 ${
-          errors.name ? 'border-red-500 focus:ring-red-300' : 'border-gray-300 focus:ring-blue-300'
-        }`}
-        placeholder="Full Name *"
-      />
-
-      <input
-        type="email"
-        name="email"
-        value={formData.email}
-        onChange={handleChange}
-        required
-        className={`w-full p-3 border rounded text-black focus:outline-none focus:ring-2 ${
-          errors.email ? 'border-red-500 focus:ring-red-300' : 'border-gray-300 focus:ring-blue-300'
-        }`}
-        placeholder="Email Address *"
-      />
-
-      <input
-        type="tel"
-        name="phone"
-        value={formData.phone}
-        onChange={handleChange}
-        required
-        className={`w-full p-3 border rounded text-black focus:outline-none focus:ring-2 ${
-          errors.phone ? 'border-red-500 focus:ring-red-300' : 'border-gray-300 focus:ring-blue-300'
-        }`}
-        placeholder="Phone Number *"
-      />
-
-      <textarea
-        name="message"
-        value={formData.message}
-        onChange={handleChange}
-        required
-        rows={5}
-        className={`w-full p-3 border rounded text-black focus:outline-none focus:ring-2 ${
-          errors.message ? 'border-red-500 focus:ring-red-300' : 'border-gray-300 focus:ring-blue-300'
-        }`}
-        placeholder="Message *"
-      />
-
-      <button
-        type="submit"
-        disabled={isSubmitting}
-        className="w-full bg-blue-600 text-white font-bold py-3 px-6 rounded hover:bg-blue-700 disabled:opacity-50"
+      {/* Form */}
+      <form
+        onSubmit={handleSubmit}
+        className="space-y-6"
       >
-        {isSubmitting ? 'Sending...' : 'Send Message'}
-      </button>
-    </form>
+        {submitSuccess && (
+          <div className="bg-green-100 text-green-800 p-4 rounded-lg">
+            <p className="font-medium">Thank you for your message!</p>
+            <p>We have received your inquiry and will get back to you shortly.</p>
+          </div>
+        )}
+
+        <input
+          type="text"
+          name="name"
+          value={formData.name}
+          onChange={handleChange}
+          required
+          className={`w-full p-3 border rounded text-black focus:outline-none focus:ring-2 ${
+            errors.name ? 'border-red-500 focus:ring-red-300' : 'border-gray-300 focus:ring-blue-300'
+          }`}
+          placeholder="Full Name *"
+        />
+
+        <input
+          type="email"
+          name="email"
+          value={formData.email}
+          onChange={handleChange}
+          required
+          className={`w-full p-3 border rounded text-black focus:outline-none focus:ring-2 ${
+            errors.email ? 'border-red-500 focus:ring-red-300' : 'border-gray-300 focus:ring-blue-300'
+          }`}
+          placeholder="Email Address *"
+        />
+
+        <input
+          type="tel"
+          name="phone"
+          value={formData.phone}
+          onChange={handleChange}
+          required
+          className={`w-full p-3 border rounded text-black focus:outline-none focus:ring-2 ${
+            errors.phone ? 'border-red-500 focus:ring-red-300' : 'border-gray-300 focus:ring-blue-300'
+          }`}
+          placeholder="Phone Number *"
+        />
+
+        <textarea
+          name="message"
+          value={formData.message}
+          onChange={handleChange}
+          required
+          rows={5}
+          className={`w-full p-3 border rounded text-black focus:outline-none focus:ring-2 ${
+            errors.message ? 'border-red-500 focus:ring-red-300' : 'border-gray-300 focus:ring-blue-300'
+          }`}
+          placeholder="Message *"
+        />
+
+        <button
+          type="submit"
+          disabled={isSubmitting}
+          className="w-full bg-blue-600 text-white font-bold py-3 px-6 rounded hover:bg-blue-700 disabled:opacity-50"
+        >
+          {isSubmitting ? 'Sending...' : 'Send Message'}
+        </button>
+      </form>
+    </div>
   );
 };
 
