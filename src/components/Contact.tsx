@@ -181,18 +181,21 @@ const Contact: React.FC = () => {
       </div>
 
       {/* Google Map Embed */}
-      <div className="rounded-2xl overflow-hidden shadow-xl border border-gray-300">
-        <iframe
-          title="ENNBI Location"
-          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10699.162156370453!2d74.8349933!3d34.1318166!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38e18f504ec6e139%3A0xf6b76ea92782a416!2sHabak%2C%20Nasim%20Bagh%2C%20Srinagar%2C%20Jammu%20and%20Kashmir%20190006!5e0!3m2!1sen!2sin!4v1716379165886!5m2!1sen!2sin"
-          width="100%"
-          height="400"
-          loading="lazy"
-          allowFullScreen
-          referrerPolicy="no-referrer-when-downgrade"
-          className="w-full h-[400px] border-0"
-        ></iframe>
-      </div>
+     <div className="mt-6">
+  <h3 className="font-semibold text-lg mb-2">Our Location</h3>
+  <iframe
+    title="ENNBI Location"
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3302.1018043943513!2d74.83521661073875!3d34.143737473010525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38e1844fb09e56f1%3A0x533561aabfa52c80!2s4RVQ%2BF4V%2C%20Srinagar!5e0!3m2!1sen!2sin!4v1747992942619!5m2!1sen!2sin"
+    width="100%"
+    height="300"
+    style={{ border: 0 }}
+    allowFullScreen
+    loading="lazy"
+    referrerPolicy="no-referrer-when-downgrade"
+    className="rounded-lg shadow-md"
+  />
+</div>
+
     </div>
   );
 };
