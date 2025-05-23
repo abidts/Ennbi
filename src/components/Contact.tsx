@@ -103,7 +103,18 @@ const Contact: React.FC = () => {
 
           <div>
             <h3 className="font-semibold text-lg">Office Hours</h3>
-            <p>Monday to Friday: 10:00 AM – 6:00 PM</p>
+            <div className="flex items-center gap-2">
+              <p>Monday to Friday: 10:00 AM – 6:00 PM</p>
+              <a
+                href="https://www.google.com/maps?q=4RVQ+F4V,+Srinagar"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:text-blue-800"
+                title="View on Google Maps"
+              >
+                <FiMapPin size={20} />
+              </a>
+            </div>
           </div>
         </div>
 
@@ -181,22 +192,22 @@ const Contact: React.FC = () => {
         </div>
       </div>
 
-      {/* {/* Google Map Embed */}
-     <div>
-  <h3 className="font-semibold text-lg">Office Hours</h3>
-  <div className="flex items-center gap-2">
-    <p>Monday to Friday: 10:00 AM – 6:00 PM</p>
-    <a
-      href="https://www.google.com/maps?q=4RVQ+F4V,+Srinagar"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="text-blue-600 hover:text-blue-800"
-      title="View on Google Maps"
-    >
-      <FiMapPin size={20} />
-    </a>
-  </div>
-
+      {/* Google Map Embed */}
+      <div className="mt-6">
+        <h3 className="font-semibold text-lg mb-2">Our Location</h3>
+        <iframe
+          title="ENNBI Location"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3302.1018043943513!2d74.83521661073875!3d34.143737473010525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38e1844fb09e56f1%3A0x533561aabfa52c80!2s4RVQ%2BF4V%2C%20Srinagar!5e0!3m2!1sen!2sin!4v1747992942619!5m2!1sen!2sin"
+          width="100%"
+          height="300"
+          style={{ border: 0 }}
+          allowFullScreen
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+          className="rounded-lg shadow-md"
+        />
+      </div>
+    </div>
   );
 };
 
