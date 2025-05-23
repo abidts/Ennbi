@@ -85,17 +85,17 @@ const Contact: React.FC = () => {
 
         <div>
           <h3 className="font-semibold text-lg">Address</h3>
-          <p>123 Main Street, Office #4<br />Cityville, Country 12345</p>
+          <p>Habak NaseemBagh Hazratbal<br />Srinagar, J&K 190006</p>
         </div>
 
         <div>
           <h3 className="font-semibold text-lg">Phone</h3>
-          <p>+1 (123) 456-7890</p>
+          <p>+91 7006016082</p>
         </div>
 
         <div>
           <h3 className="font-semibold text-lg">Email</h3>
-          <p>info@ennbi.com</p>
+          <p>hr@ennbi.com</p>
         </div>
 
         <div>
