@@ -196,7 +196,7 @@ const Contact: React.FC = () => {
       <FiMapPin size={20} />
     </a>
   </div>
-</div>
+
   );
 };
 
