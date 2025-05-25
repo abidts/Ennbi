@@ -30,6 +30,11 @@ const Navbar: React.FC = () => {
             </div>
           </a>
 
+          <li>
+  <a href="/blog" className="hover:text-blue-500">Blog</a>
+</li>
+
+
           <div className="hidden md:flex space-x-8">
             {['Home', 'About', 'Services', 'Portfolio', 'Contact'].map((item) => (
               <a
