@@ -89,6 +89,15 @@ const Contact: React.FC = () => {
           <div>
             <h3 className="font-semibold text-lg">Address</h3>
             <p>Habak NaseemBagh Hazratbal<br />Srinagar, J&K 190006</p>
+            <a
+                href="https://www.google.com/maps?q=4RVQ+F4V,+Srinagar"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:text-blue-800"
+                title="View on Google Maps"
+              >
+                <MapPin size={20} />
+              </a>
           </div>
 
           <div>
@@ -105,15 +114,7 @@ const Contact: React.FC = () => {
             <h3 className="font-semibold text-lg">Office Hours</h3>
             <div className="flex items-center gap-2">
               <p>Monday to Friday: 10:00 AM – 6:00 PM</p>
-              <a
-                href="https://www.google.com/maps?q=4RVQ+F4V,+Srinagar"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-600 hover:text-blue-800"
-                title="View on Google Maps"
-              >
-                <MapPin size={20} />
-              </a>
+              
             </div>
           </div>
         </div>
