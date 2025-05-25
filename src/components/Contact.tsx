@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FiMapPin } from 'react-icons/fi';
+import { MapPin } from 'lucide-react';
 
 interface FormData {
   name: string;
@@ -84,7 +84,7 @@ const Contact: React.FC = () => {
         {/* Left - Contact Info */}
         <div className="space-y-6 text-gray-800">
           <h2 className="text-3xl font-bold text-gray-900">Contact Information</h2>
-          <p>We’re here to help. Reach out to us using the information below or send a message using the form.</p>
+          <p>We're here to help. Reach out to us using the information below or send a message using the form.</p>
 
           <div>
             <h3 className="font-semibold text-lg">Address</h3>
@@ -112,7 +112,7 @@ const Contact: React.FC = () => {
                 className="text-blue-600 hover:text-blue-800"
                 title="View on Google Maps"
               >
-                <FiMapPin size={20} />
+                <MapPin size={20} />
               </a>
             </div>
           </div>
@@ -122,7 +122,7 @@ const Contact: React.FC = () => {
         <div>
           <h2 className="text-3xl font-bold text-gray-900 mb-2">Send us a message</h2>
           <p className="text-gray-600 mb-6">
-            Whether you have a question, need support, or just want to say hello — we’re here and ready to help.
+            Whether you have a question, need support, or just want to say hello — we're here and ready to help.
           </p>
 
           <form onSubmit={handleSubmit} className="space-y-6">
