@@ -144,13 +144,3 @@ const Blog: React.FC = () => {
 };
 
 export default Blog;
-```
-
-**Key changes:**
-- **Detail view** now includes a “← Back to Home” link above the post
-- **Background** set to a light off‑white (`#F8F4E6`) with a repeating vintage spots image (`/images/vintage-spots.png`)
-- Blog container given padding, rounded white semi‑opaque card for readability
-
-> 🔧 Be sure to place a `vintage-spots.png` pattern in your `public/images/` folder. You can find free spot textures online.
-
-Let me know if you’d like adjustments to the background or further styling tweaks!```
