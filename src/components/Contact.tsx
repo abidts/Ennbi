@@ -6,6 +6,9 @@ interface FormData {
   email: string;
   phone: string;
   message: string;
+  projectType: string;
+  budget: string;
+  timeline: string;
 }
 
 const Contact: React.FC = () => {
@@ -14,13 +17,16 @@ const Contact: React.FC = () => {
     email: '',
     phone: '',
     message: '',
+    projectType: '',
+    budget: '',
+    timeline: '',
   });
   const [errors, setErrors] = useState<Partial<FormData>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -42,6 +48,9 @@ const Contact: React.FC = () => {
     }
     if (!formData.phone.trim()) newErrors.phone = 'Phone is required';
     if (!formData.message.trim()) newErrors.message = 'Message is required';
+    if (!formData.projectType) newErrors.projectType = 'Project type is required';
+    if (!formData.budget) newErrors.budget = 'Budget range is required';
+    if (!formData.timeline) newErrors.timeline = 'Timeline is required';
 
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
@@ -64,7 +73,15 @@ const Contact: React.FC = () => {
 
       if (response.ok) {
         setSubmitSuccess(true);
-        setFormData({ name: '', email: '', phone: '', message: '' });
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          message: '',
+          projectType: '',
+          budget: '',
+          timeline: '',
+        });
         setTimeout(() => setSubmitSuccess(false), 5000);
       } else {
         alert('Failed to submit. Please try again later.');
@@ -79,9 +96,7 @@ const Contact: React.FC = () => {
 
   return (
     <div className="max-w-6xl mx-auto px-4 py-10 space-y-10">
-      {/* Contact Info & Form */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 bg-white shadow-2xl rounded-2xl p-8">
-        {/* Left - Contact Info */}
         <div className="space-y-6 text-gray-800">
           <h2 className="text-3xl font-bold text-gray-900">Contact Information</h2>
           <p>We're here to help. Reach out to us using the information below or send a message using the form.</p>
@@ -89,15 +104,15 @@ const Contact: React.FC = () => {
           <div>
             <h3 className="font-semibold text-lg">Address</h3>
             <p>Habak NaseemBagh Hazratbal<br />Srinagar, J&K 190006</p>
-           <a
-  href="https://www.google.com/maps?q=34.143656659922925,74.83767531401399"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="text-blue-600 hover:text-blue-800"
-  title="View on Google Maps"
->
-  <MapPin size={20} />
-</a>
+            <a
+              href="https://www.google.com/maps?q=34.143656659922925,74.83767531401399"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 hover:text-blue-800"
+              title="View on Google Maps"
+            >
+              <MapPin size={20} />
+            </a>
           </div>
 
           <div>
@@ -114,16 +129,14 @@ const Contact: React.FC = () => {
             <h3 className="font-semibold text-lg">Office Hours</h3>
             <div className="flex items-center gap-2">
               <p>Monday to Friday: 10:00 AM – 6:00 PM</p>
-              
             </div>
           </div>
         </div>
 
-        {/* Right - Form */}
         <div>
-          <h2 className="text-3xl font-bold text-gray-900 mb-2">Send us a message</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-2">Discuss Your Project</h2>
           <p className="text-gray-600 mb-6">
-            Whether you have a question, need support, or just want to say hello — we're here and ready to help.
+            Tell us about your project, and we'll help bring your vision to life.
           </p>
 
           <form onSubmit={handleSubmit} className="space-y-6">
@@ -170,6 +183,57 @@ const Contact: React.FC = () => {
               placeholder="Phone Number *"
             />
 
+            <select
+              name="projectType"
+              value={formData.projectType}
+              onChange={handleChange}
+              required
+              className={`w-full p-3 border rounded text-black focus:outline-none focus:ring-2 ${
+                errors.projectType ? 'border-red-500 focus:ring-red-300' : 'border-gray-300 focus:ring-blue-300'
+              }`}
+            >
+              <option value="">Select Project Type *</option>
+              <option value="website">Website Development</option>
+              <option value="mobile">Mobile App Development</option>
+              <option value="ecommerce">E-Commerce Solution</option>
+              <option value="custom">Custom Software</option>
+              <option value="ai">AI/ML Solution</option>
+              <option value="other">Other</option>
+            </select>
+
+            <select
+              name="budget"
+              value={formData.budget}
+              onChange={handleChange}
+              required
+              className={`w-full p-3 border rounded text-black focus:outline-none focus:ring-2 ${
+                errors.budget ? 'border-red-500 focus:ring-red-300' : 'border-gray-300 focus:ring-blue-300'
+              }`}
+            >
+              <option value="">Select Budget Range *</option>
+              <option value="5k-15k">₹5,000 - ₹15,000</option>
+              <option value="15k-30k">₹15,000 - ₹30,000</option>
+              <option value="30k-50k">₹30,000 - ₹50,000</option>
+              <option value="50k+">₹50,000+</option>
+            </select>
+
+            <select
+              name="timeline"
+              value={formData.timeline}
+              onChange={handleChange}
+              required
+              className={`w-full p-3 border rounded text-black focus:outline-none focus:ring-2 ${
+                errors.timeline ? 'border-red-500 focus:ring-red-300' : 'border-gray-300 focus:ring-blue-300'
+              }`}
+            >
+              <option value="">Select Timeline *</option>
+              <option value="1-2weeks">1-2 Weeks</option>
+              <option value="2-4weeks">2-4 Weeks</option>
+              <option value="1-2months">1-2 Months</option>
+              <option value="2-3months">2-3 Months</option>
+              <option value="3months+">3+ Months</option>
+            </select>
+
             <textarea
               name="message"
               value={formData.message}
@@ -179,7 +243,7 @@ const Contact: React.FC = () => {
               className={`w-full p-3 border rounded text-black focus:outline-none focus:ring-2 ${
                 errors.message ? 'border-red-500 focus:ring-red-300' : 'border-gray-300 focus:ring-blue-300'
               }`}
-              placeholder="Message *"
+              placeholder="Tell us about your project requirements *"
             />
 
             <button
@@ -193,7 +257,6 @@ const Contact: React.FC = () => {
         </div>
       </div>
 
-      {/* Google Map Embed */}
       <div className="mt-6">
         <h3 className="font-semibold text-lg mb-2">Our Location</h3>
         <iframe

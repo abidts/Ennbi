@@ -22,9 +22,12 @@ const Navbar: React.FC = () => {
         <div className="flex justify-between items-center">
           <a href="#home" className="relative group">
             <span className="absolute -inset-1 bg-gradient-to-r from-white/20 to-transparent rounded-lg blur opacity-0 group-hover:opacity-100 transition-opacity duration-500"></span>
-            <h1 className="relative text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-white/50 tracking-tight">
-              ENNBI
-            </h1>
+            <div className="relative flex flex-col items-center">
+              <h1 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-white/50 tracking-tight">
+                ENNBI
+              </h1>
+              <span className="text-sm text-white/70">SOFTWARES</span>
+            </div>
           </a>
 
           <div className="hidden md:flex space-x-8">
