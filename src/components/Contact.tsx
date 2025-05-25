@@ -211,10 +211,9 @@ const Contact: React.FC = () => {
               }`}
             >
               <option value="">Select Budget Range *</option>
-              <option value="5k-15k">₹5,000 - ₹15,000</option>
-              <option value="15k-30k">₹15,000 - ₹30,000</option>
-              <option value="30k-50k">₹30,000 - ₹50,000</option>
-              <option value="50k+">₹50,000+</option>
+              <option value="5k-50k">₹5,000 - ₹50,000</option>
+              <option value="50k-100k">₹50,000 - ₹100,000</option>
+              <option value="100k+">₹100,000+</option>
             </select>
 
             <select
@@ -227,10 +226,8 @@ const Contact: React.FC = () => {
               }`}
             >
               <option value="">Select Timeline *</option>
-              <option value="1-2weeks">1-2 Weeks</option>
-              <option value="2-4weeks">2-4 Weeks</option>
-              <option value="1-2months">1-2 Months</option>
-              <option value="2-3months">2-3 Months</option>
+              <option value="1-4weeks">1-4 Weeks</option>
+              <option value="1-3months">1-3 Months</option>
               <option value="3months+">3+ Months</option>
             </select>
 
