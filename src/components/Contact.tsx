@@ -104,7 +104,7 @@ const Contact: React.FC = () => {
 
           <div>
             <h3 className="font-semibold text-lg">Address</h3>
-            <p>Habak NaseemBagh Hazratbal<br />Srinagar, J&K 190006</p>
+            <p>Habak Naseem Bagh Hazratbal<br />Srinagar, J&K 190006</p>
             <a
               href="https://www.google.com/maps?q=34.143656659922925,74.83767531401399"
               target="_blank"
