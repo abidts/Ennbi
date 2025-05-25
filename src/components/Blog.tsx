@@ -9,14 +9,13 @@ type BlogPost = {
   content: string;
 };
 
-// Real online images
+// High-resolution rectangular images
 const blogPosts: BlogPost[] = [
   {
     id: '1',
     title: 'The IT Revolution: Then and Now',
-    image: 'https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&h=400',
-    content:
-      `The IT revolution has reshaped the modern world in unimaginable ways. In the past, massive mainframes and limited processing power constrained computing. Today, cloud computing, microservices, and containerized deployments dominate the scene.
+    image: 'https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&h=600&w=1200',
+    content: `The IT revolution has reshaped the modern world in unimaginable ways. In the past, massive mainframes and limited processing power constrained computing. Today, cloud computing, microservices, and containerized deployments dominate the scene.
 
 Businesses now rely on real-time data analytics, AI-driven decisions, and decentralized workflows. This evolution has enabled agility, reduced costs, and improved customer experience. The transformation didn't occur overnight; it’s the result of decades of innovation in hardware, software, and infrastructure.
 
@@ -25,9 +24,8 @@ From the early days of punch cards and CRT terminals to serverless architectures
   {
     id: '2',
     title: 'Emerging AI: What’s Next?',
-    image: 'https://images.pexels.com/photos/5473950/pexels-photo-5473950.jpeg?auto=compress&cs=tinysrgb&h=400',
-    content:
-      `Artificial Intelligence is entering its most transformative era. Large Language Models (LLMs), computer vision, and autonomous agents are now core parts of how organizations operate. Chatbots, smart assistants, and automation are replacing repetitive jobs, freeing up humans for creative tasks.
+    image: 'https://images.pexels.com/photos/5473950/pexels-photo-5473950.jpeg?auto=compress&cs=tinysrgb&h=600&w=1200',
+    content: `Artificial Intelligence is entering its most transformative era. Large Language Models (LLMs), computer vision, and autonomous agents are now core parts of how organizations operate. Chatbots, smart assistants, and automation are replacing repetitive jobs, freeing up humans for creative tasks.
 
 In the next few years, we’ll witness advancements like emotionally aware AI, real-time multilingual translation, and domain-specific copilots revolutionizing medicine, law, and education. Concerns remain about bias and misuse, making responsible development critical.
 
@@ -36,9 +34,8 @@ As AI expands into embedded devices and edge computing, we’re entering an age 
   {
     id: '3',
     title: 'Next-Gen Tech: The Road Ahead',
-    image: 'https://images.pexels.com/photos/3389961/pexels-photo-3389961.jpeg?auto=compress&cs=tinysrgb&h=400',
-    content:
-      `The future of tech is being shaped by groundbreaking innovations. Quantum computing promises exponentially faster calculations, opening new possibilities in cryptography, chemistry, and logistics. Edge AI will enable real-time processing in smart cities and autonomous vehicles.
+    image: 'https://images.pexels.com/photos/3389961/pexels-photo-3389961.jpeg?auto=compress&cs=tinysrgb&h=600&w=1200',
+    content: `The future of tech is being shaped by groundbreaking innovations. Quantum computing promises exponentially faster calculations, opening new possibilities in cryptography, chemistry, and logistics. Edge AI will enable real-time processing in smart cities and autonomous vehicles.
 
 Meanwhile, blockchain is evolving beyond cryptocurrency into secure digital identity, supply chain integrity, and decentralized finance. These technologies combined will redefine security, transparency, and decision-making.
 
@@ -67,19 +64,13 @@ const Blog: React.FC = () => {
           <button
             onClick={() => navigate('/blog')}
             className="absolute top-4 right-4 text-2xl font-bold text-gray-600 hover:text-gray-800"
-            aria-label="Close"
+            aria-label="Exit to blog list"
           >
             ×
           </button>
-          <img
-            src={post.image}
-            alt={post.title}
-            className="rounded-xl w-full mt-4 mb-6"
-          />
+          <img src={post.image} alt={post.title} className="rounded-lg w-full h-auto mb-6" />
           <h1 className="text-4xl font-bold mb-4">{post.title}</h1>
-          <p className="text-lg whitespace-pre-line leading-relaxed">
-            {post.content}
-          </p>
+          <p className="text-lg whitespace-pre-line leading-relaxed">{post.content}</p>
         </div>
       </div>
     );
@@ -97,19 +88,10 @@ const Blog: React.FC = () => {
         <h1 className="text-4xl font-bold">Tech Insights Blog</h1>
 
         {currentPosts.map((post) => (
-          <article
-            key={post.id}
-            className="space-y-3 border-b pb-6"
-          >
-            <img
-              src={post.image}
-              alt={post.title}
-              className="rounded-xl w-full"
-            />
+          <article key={post.id} className="space-y-3 border-b pb-6">
+            <img src={post.image} alt={post.title} className="rounded-lg w-full h-64 object-cover" />
             <h2 className="text-2xl font-semibold">{post.title}</h2>
-            <p className="text-gray-700">
-              {post.content.slice(0, 200)}...
-            </p>
+            <p className="text-gray-700">{post.content.slice(0, 200)}...</p>
             <Link
               to={`/blog?id=${post.id}`}
               className="text-blue-600 hover:text-blue-800 underline"
@@ -128,9 +110,7 @@ const Blog: React.FC = () => {
           >
             Previous
           </button>
-          <span className="text-gray-700">
-            Page {currentPage} of {totalPages}
-          </span>
+          <span className="text-gray-700">Page {currentPage} of {totalPages}</span>
           <button
             disabled={currentPage === totalPages}
             onClick={() => setCurrentPage((p) => p + 1)}
