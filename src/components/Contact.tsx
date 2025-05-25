@@ -89,15 +89,15 @@ const Contact: React.FC = () => {
           <div>
             <h3 className="font-semibold text-lg">Address</h3>
             <p>Habak NaseemBagh Hazratbal<br />Srinagar, J&K 190006</p>
-            <a
-                href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3302.1018043943513!2d74.83521661073875!3d34.143737473010525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38e1844fb09e56f1%3A0x533561aabfa52c80!2s4RVQ%2BF4V%2C%20Srinagar!5e0!3m2!1sen!2sin!4v1747992942619!5m2!1sen!2sin"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-600 hover:text-blue-800"
-                title="View on Google Maps"
-              >
-                <MapPin size={20} />
-              </a>
+           <a
+  href="https://www.google.com/maps?q=34.143656659922925,74.83767531401399"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="text-blue-600 hover:text-blue-800"
+  title="View on Google Maps"
+>
+  <MapPin size={20} />
+</a>
           </div>
 
           <div>
