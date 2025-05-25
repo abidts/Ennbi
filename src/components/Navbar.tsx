@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,6 +14,15 @@ const Navbar: React.FC = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const navLinks = [
+    { name: 'Home', href: '#home' },
+    { name: 'About', href: '#about' },
+    { name: 'Services', href: '#services' },
+    { name: 'Portfolio', href: '#portfolio' },
+    { name: 'Contact', href: '#contact' },
+    { name: 'Blog', to: '/blog' }, // external route
+  ];
 
   return (
     <nav className={`fixed w-full z-50 transition-all duration-500 ${
@@ -30,24 +40,32 @@ const Navbar: React.FC = () => {
             </div>
           </a>
 
-          <li>
-  <a href="/blog" className="hover:text-blue-500">Blog</a>
-</li>
-
-
+          {/* Desktop nav */}
           <div className="hidden md:flex space-x-8">
-            {['Home', 'About', 'Services', 'Portfolio', 'Contact'].map((item) => (
-              <a
-                key={item}
-                href={`#${item.toLowerCase()}`}
-                className="text-white/70 hover:text-white transition-colors duration-300 relative group"
-              >
-                <span className="absolute -bottom-1 left-0 w-0 h-px bg-white transition-all duration-300 group-hover:w-full"></span>
-                {item}
-              </a>
-            ))}
+            {navLinks.map(({ name, href, to }) =>
+              to ? (
+                <Link
+                  key={name}
+                  to={to}
+                  className="text-white/70 hover:text-white transition-colors duration-300 relative group"
+                >
+                  <span className="absolute -bottom-1 left-0 w-0 h-px bg-white transition-all duration-300 group-hover:w-full"></span>
+                  {name}
+                </Link>
+              ) : (
+                <a
+                  key={name}
+                  href={href}
+                  className="text-white/70 hover:text-white transition-colors duration-300 relative group"
+                >
+                  <span className="absolute -bottom-1 left-0 w-0 h-px bg-white transition-all duration-300 group-hover:w-full"></span>
+                  {name}
+                </a>
+              )
+            )}
           </div>
 
+          {/* Mobile toggle */}
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -58,19 +76,31 @@ const Navbar: React.FC = () => {
           </div>
         </div>
 
+        {/* Mobile nav */}
         {isOpen && (
           <div className="md:hidden absolute top-full left-0 right-0 bg-black/95 backdrop-blur-lg py-4">
             <div className="container mx-auto px-4 flex flex-col space-y-4">
-              {['Home', 'About', 'Services', 'Portfolio', 'Contact'].map((item) => (
-                <a
-                  key={item}
-                  href={`#${item.toLowerCase()}`}
-                  onClick={() => setIsOpen(false)}
-                  className="text-white/70 hover:text-white transition-colors duration-300 py-2"
-                >
-                  {item}
-                </a>
-              ))}
+              {navLinks.map(({ name, href, to }) =>
+                to ? (
+                  <Link
+                    key={name}
+                    to={to}
+                    onClick={() => setIsOpen(false)}
+                    className="text-white/70 hover:text-white transition-colors duration-300 py-2"
+                  >
+                    {name}
+                  </Link>
+                ) : (
+                  <a
+                    key={name}
+                    href={href}
+                    onClick={() => setIsOpen(false)}
+                    className="text-white/70 hover:text-white transition-colors duration-300 py-2"
+                  >
+                    {name}
+                  </a>
+                )
+              )}
             </div>
           </div>
         )}
