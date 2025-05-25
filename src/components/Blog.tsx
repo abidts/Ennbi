@@ -58,7 +58,7 @@ const Blog: React.FC = () => {
     if (!post) return <div className="p-6">Blog not found</div>;
 
     return (
-      <div className="min-h-screen bg-[#F8F4E6] bg-[url('https://i.ibb.co/6Rw7b4F/vintage-spots.png')] bg-contain bg-repeat py-10">
+      <div className="min-h-screen bg-gray-100 py-10">
         <Navbar />
         <div className="max-w-4xl mx-auto p-6 text-gray-800 bg-white bg-opacity-90 rounded-xl shadow-lg relative">
           <button
@@ -82,7 +82,7 @@ const Blog: React.FC = () => {
   const totalPages = Math.ceil(blogPosts.length / postsPerPage);
 
   return (
-    <div className="min-h-screen bg-[#F8F4E6] bg-[url('https://i.ibb.co/6Rw7b4F/vintage-spots.png')] bg-contain bg-repeat py-10">
+    <div className="min-h-screen bg-gray-100 py-10">
       <Navbar />
       <div className="max-w-5xl mx-auto p-6 space-y-8 text-gray-900">
         <h1 className="text-4xl font-bold">Tech Insights Blog</h1>
