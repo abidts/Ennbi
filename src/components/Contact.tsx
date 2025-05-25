@@ -90,7 +90,7 @@ const Contact: React.FC = () => {
             <h3 className="font-semibold text-lg">Address</h3>
             <p>Habak NaseemBagh Hazratbal<br />Srinagar, J&K 190006</p>
             <a
-                href="https://www.google.com/maps?q=4RVQ+F4V,+Srinagar"
+                href="<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d206.38156018244848!2d74.83767531401399!3d34.143656659922925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1748163263887!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-blue-600 hover:text-blue-800"
