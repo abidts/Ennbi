@@ -69,6 +69,13 @@ export const projects: ProjectType[] = [
     description: "A complete digital transformation for a retail chain, including e-commerce platform and inventory management.",
     image: "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     tags: ["E-Commerce", "Mobile", "Cloud"]
+  },
+  {
+    id: 4,
+    title: "Smart Restaurant System",
+    description: "An innovative food ordering solution featuring self-service kiosks, mobile ordering, and kitchen display systems for streamlined restaurant operations.",
+    image: "https://images.pexels.com/photos/2280571/pexels-photo-2280571.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    tags: ["POS", "Kiosk", "Mobile Ordering", "Real-time"]
   }
 ];
 
@@ -79,7 +86,6 @@ export const testimonials: TestimonialType[] = [
     position: "Business Owner",
     company: "Heritage Craft.",
     quote: "Ennbi Softwares delivered beyond our expectations. Their expertise in cloud solutions has transformed our operations and improved efficiency by 40%.",
-  //  image: "https://images.pexels.com/photos/3763188/pexels-photo-3763188.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
   },
   {
     id: 2,
@@ -87,7 +93,6 @@ export const testimonials: TestimonialType[] = [
     position: " Director",
     company: "Logisco courier service",
     quote: "The mobile application developed by Ennbi has received outstanding feedback from our customers and significantly improved our user engagement metrics.",
-  //  image: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
   },
   {
     id: 3,
@@ -95,6 +100,5 @@ export const testimonials: TestimonialType[] = [
     position: "MD",
     company: "M Studio",
     quote: "Working with Ennbi Softwares was a game-changer for our business. Their AI-driven solution has helped us increase sales by 35% in just six months.",
-//    image: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
   }
 ];
