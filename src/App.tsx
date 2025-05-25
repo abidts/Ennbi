@@ -12,7 +12,6 @@ import Packages from './components/Packages';
 import './index.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Blog from './components/Blog';
-import Home from './Home'; // or your main page
 
 
 function App() {
