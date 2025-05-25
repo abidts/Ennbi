@@ -1,13 +1,16 @@
+```tsx
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
-type BlogPost = {
+// Blog post type
+interface BlogPost {
   id: string;
   title: string;
   image: string;
   content: string;
-};
+}
 
+// Sample blog data
 const blogPosts: BlogPost[] = [
   {
     id: '1',
@@ -52,69 +55,103 @@ const Blog: React.FC = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const postsPerPage = 2;
 
+  // Detail view
   if (postId) {
     const post = blogPosts.find((p) => p.id === postId);
     if (!post) return <div className="p-6">Blog not found</div>;
 
     return (
-      <div className="max-w-4xl mx-auto p-6 text-gray-800 space-y-4">
-        <img src={post.image} alt={post.title} className="rounded-xl w-full" />
-        <h1 className="text-4xl font-bold">{post.title}</h1>
-        <p className="text-lg whitespace-pre-line">{post.content}</p>
-        <Link
-          to="/blog"
-          className="inline-block mt-4 text-blue-600 hover:text-blue-800 underline"
-        >
-          ← Back to Blog
-        </Link>
+      <div
+        className="min-h-screen bg-[#F8F4E6] bg-[url('/images/vintage-spots.png')] bg-contain bg-repeat py-10"
+      >
+        <div className="max-w-4xl mx-auto p-6 text-gray-800 bg-white bg-opacity-90 rounded-xl shadow-lg">
+          <Link
+            to="/"
+            className="text-blue-600 hover:text-blue-800 underline"
+          >
+            ← Back to Home
+          </Link>
+
+          <img
+            src={post.image}
+            alt={post.title}
+            className="rounded-xl w-full mt-4 mb-6"
+          />
+          <h1 className="text-4xl font-bold mb-4">{post.title}</h1>
+          <p className="text-lg whitespace-pre-line leading-relaxed">
+            {post.content}
+          </p>
+        </div>
       </div>
     );
   }
 
+  // List view
   const startIndex = (currentPage - 1) * postsPerPage;
   const currentPosts = blogPosts.slice(startIndex, startIndex + postsPerPage);
   const totalPages = Math.ceil(blogPosts.length / postsPerPage);
 
   return (
-    <div className="max-w-5xl mx-auto p-6 space-y-8 text-gray-900">
-      <h1 className="text-4xl font-bold">Tech Insights Blog</h1>
+    <div className="min-h-screen bg-[#F8F4E6] bg-[url('/images/vintage-spots.png')] bg-contain bg-repeat py-10">
+      <div className="max-w-5xl mx-auto p-6 space-y-8 text-gray-900">
+        <h1 className="text-4xl font-bold">Tech Insights Blog</h1>
 
-      {currentPosts.map((post) => (
-        <article key={post.id} className="space-y-3 border-b pb-6">
-          <img src={post.image} alt={post.title} className="rounded-xl w-full" />
-          <h2 className="text-2xl font-semibold">{post.title}</h2>
-          <p className="text-gray-700">{post.content.slice(0, 200)}...</p>
-          <Link
-            to={`/blog?id=${post.id}`}
-            className="text-blue-600 hover:text-blue-800 underline"
+        {currentPosts.map((post) => (
+          <article
+            key={post.id}
+            className="space-y-3 border-b pb-6"
           >
-            Read more →
-          </Link>
-        </article>
-      ))}
+            <img
+              src={post.image}
+              alt={post.title}
+              className="rounded-xl w-full"
+            />
+            <h2 className="text-2xl font-semibold">{post.title}</h2>
+            <p className="text-gray-700">
+              {post.content.slice(0, 200)}...
+            </p>
+            <Link
+              to={`/blog?id=${post.id}`}
+              className="text-blue-600 hover:text-blue-800 underline"
+            >
+              Read more →
+            </Link>
+          </article>
+        ))}
 
-      {/* Pagination */}
-      <div className="flex justify-center items-center space-x-4 pt-6">
-        <button
-          disabled={currentPage === 1}
-          onClick={() => setCurrentPage((p) => p - 1)}
-          className="px-4 py-2 bg-blue-100 rounded disabled:opacity-50"
-        >
-          Previous
-        </button>
-        <span className="text-gray-700">
-          Page {currentPage} of {totalPages}
-        </span>
-        <button
-          disabled={currentPage === totalPages}
-          onClick={() => setCurrentPage((p) => p + 1)}
-          className="px-4 py-2 bg-blue-100 rounded disabled:opacity-50"
-        >
-          Next
-        </button>
+        {/* Pagination */}
+        <div className="flex justify-center items-center space-x-4 pt-6">
+          <button
+            disabled={currentPage === 1}
+            onClick={() => setCurrentPage((p) => p - 1)}
+            className="px-4 py-2 bg-blue-100 rounded disabled:opacity-50"
+          >
+            Previous
+          </button>
+          <span className="text-gray-700">
+            Page {currentPage} of {totalPages}
+          </span>
+          <button
+            disabled={currentPage === totalPages}
+            onClick={() => setCurrentPage((p) => p + 1)}
+            className="px-4 py-2 bg-blue-100 rounded disabled:opacity-50"
+          >
+            Next
+          </button>
+        </div>
       </div>
     </div>
   );
 };
 
 export default Blog;
+```
+
+**Key changes:**
+- **Detail view** now includes a “← Back to Home” link above the post
+- **Background** set to a light off‑white (`#F8F4E6`) with a repeating vintage spots image (`/images/vintage-spots.png`)
+- Blog container given padding, rounded white semi‑opaque card for readability
+
+> 🔧 Be sure to place a `vintage-spots.png` pattern in your `public/images/` folder. You can find free spot textures online.
+
+Let me know if you’d like adjustments to the background or further styling tweaks!```
