@@ -68,10 +68,14 @@ function App() {
 
   return (
     <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/blog" element={<Blog />} />
-      </Routes>
+     <Routes>
+  <Route path="/" element={<Home />} />
+  <Route path="/blog" element={<BlogIndex />} />
+  <Route path="/blog/it-revolution" element={<ITRevolution />} />
+  <Route path="/blog/emerging-ai" element={<EmergingAI />} />
+  <Route path="/blog/next-gen-tech" element={<NextGenTech />} />
+</Routes>
+
     </Router>
   );
 }
