@@ -76,6 +76,20 @@ export const projects: ProjectType[] = [
     description: "An innovative food ordering solution featuring self-service kiosks, mobile ordering, and kitchen display systems for streamlined restaurant operations.",
     image: "https://images.pexels.com/photos/2280571/pexels-photo-2280571.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     tags: ["POS", "Kiosk", "Mobile Ordering", "Real-time"]
+  },
+  {
+    id: 5,
+    title: "AI-Powered Customer Service",
+    description: "An intelligent customer service platform using natural language processing and machine learning to provide 24/7 automated support with human-like interactions.",
+    image: "https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    tags: ["AI", "NLP", "Machine Learning", "Customer Service"]
+  },
+  {
+    id: 6,
+    title: "Predictive Analytics Dashboard",
+    description: "A sophisticated analytics platform using AI to predict market trends, customer behavior, and business metrics with interactive visualizations.",
+    image: "https://images.pexels.com/photos/669610/pexels-photo-669610.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    tags: ["AI", "Analytics", "Data Visualization", "Predictive Modeling"]
   }
 ];
 
