@@ -33,7 +33,7 @@ const About: React.FC = () => {
           
           <div className="md:w-1/2">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              About <span className="text-blue-900">Ennbi Softwares</span>
+              About <span className="text-blue-900">EnnBi Softwares</span>
             </h2>
 
             <div className="h-1 w-20 bg-blue-500 mb-6"></div>
