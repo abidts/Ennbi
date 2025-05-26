@@ -32,18 +32,9 @@ const Testimonials: React.FC = () => {
                   <p className="italic text-blue-100">"{testimonial.quote}"</p>
                 </div>
                 
-                <div className="mt-auto flex items-center">
-                  <div className="w-12 h-12 rounded-full overflow-hidden mr-4">
-                    <img 
-                      src={testimonial.image} 
-                      alt={testimonial.name} 
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div>
-                    <h4 className="font-bold">{testimonial.name}</h4>
-                    <p className="text-blue-300 text-sm">{testimonial.position}, {testimonial.company}</p>
-                  </div>
+                <div className="mt-auto">
+                  <h4 className="font-bold">{testimonial.name}</h4>
+                  <p className="text-blue-300 text-sm">{testimonial.position}, {testimonial.company}</p>
                 </div>
               </div>
             </div>
