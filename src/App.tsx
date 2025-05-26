@@ -16,6 +16,7 @@ import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Blog from './components/Blog';
+import Login from './components/Login';
 import './index.css';
 
 const Home = () => (
@@ -66,11 +67,12 @@ function App() {
     return () => animatedElements.forEach(el => observer.unobserve(el));
   }, []);
 
-   return (
+  return (
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/blog" element={<Blog />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
     </Router>
   );

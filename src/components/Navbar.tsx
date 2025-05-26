@@ -21,7 +21,8 @@ const Navbar: React.FC = () => {
     { name: 'Services', href: '#services' },
     { name: 'Portfolio', href: '#portfolio' },
     { name: 'Contact', href: '#contact' },
-    { name: 'Blog', to: '/blog' }, // external route
+    { name: 'Blog', to: '/blog' },
+    { name: 'Employee Corner', to: '/login' },
   ];
 
   return (
