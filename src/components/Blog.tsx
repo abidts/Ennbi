@@ -22,7 +22,7 @@ From the early days of punch cards and CRT terminals to serverless architectures
   },
   {
     id: '2',
-    title: 'Emerging AI: What's Next?',
+    title: 'Emerging AI: What\'s Next?',
     image: 'https://images.pexels.com/photos/5473950/pexels-photo-5473950.jpeg?auto=compress&cs=tinysrgb&h=600&w=1200',
     content: `Artificial Intelligence is entering its most transformative era. Large Language Models (LLMs), computer vision, and autonomous agents are now core parts of how organizations operate. Chatbots, smart assistants, and automation are replacing repetitive jobs, freeing up humans for creative tasks.
 
