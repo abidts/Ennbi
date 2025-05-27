@@ -39,7 +39,7 @@ const Hero: React.FC = () => {
 
           {/* Subheading */}
           <motion.p
-            className="text-lg md:text-2xl text-green-200 mb-12 max-w-3xl mx-auto"
+            className="text-lg md:text-2xl text-orrange-200 mb-12 max-w-3xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 1 }}
