@@ -54,24 +54,8 @@ const Navbar: React.FC = () => {
     <span className="text-sm text-white/70">SOFTWARES</span>
   </div>
 </a> */}
-          <a href="#home" className="flex items-center space-x-2 group">
-  <img
-    src="https://tinypic.host/images/2025/05/21/WhatsApp-Image-2025-05-21-at-9.23.13-PM.3da2m5.png"
-    alt="ENNBI Logo"
-    className="w-6 h-6 object-contain filter brightness-200 saturate-0 contrast-125"
-  />
-  <div className="flex flex-col items-start leading-tight">
-    <h1 className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-300 tracking-tight">
-      ENNBI
-    </h1>
-    <span className="text-xs text-white/70">SOFTWARES</span>
-  </div>
-</a>
-iv>
-</a>
 
-          
-          {/* Desktop nav */}
+ {/* Desktop nav */}
           <div className="hidden md:flex space-x-8">
             {navLinks.map(({ name, href, to }) =>
               to ? (
