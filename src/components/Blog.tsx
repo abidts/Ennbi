@@ -23,7 +23,7 @@ From the early days of punch cards and CRT terminals to serverless architectures
   {
     id: '2',
     title: 'Emerging AI: What\'s Next?',
-    image: 'hhttps://images.pexels.com/photos/7130498/pexels-photo-7130498.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=1440&w=2560',
+    image: 'https://images.pexels.com/photos/7130498/pexels-photo-7130498.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=1440&w=2560',
     content: `Artificial Intelligence is entering its most transformative era. Large Language Models (LLMs), computer vision, and autonomous agents are now core parts of how organizations operate. Chatbots, smart assistants, and automation are replacing repetitive jobs, freeing up humans for creative tasks.
 
 In the next few years, we'll witness advancements like emotionally aware AI, real-time multilingual translation, and domain-specific copilots revolutionizing medicine, law, and education. Concerns remain about bias and misuse, making responsible development critical.
@@ -33,7 +33,7 @@ As AI expands into embedded devices and edge computing, we're entering an age wh
   {
     id: '3',
     title: 'Next-Gen Tech: The Road Ahead',
-    image: 'hhttps://images.pexels.com/photos/3408744/pexels-photo-3408744.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=1440&w=2560',
+    image: 'https://images.pexels.com/photos/3408744/pexels-photo-3408744.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=1440&w=2560',
     content: `The future of tech is being shaped by groundbreaking innovations. Quantum computing promises exponentially faster calculations, opening new possibilities in cryptography, chemistry, and logistics. Edge AI will enable real-time processing in smart cities and autonomous vehicles.
 
 Meanwhile, blockchain is evolving beyond cryptocurrency into secure digital identity, supply chain integrity, and decentralized finance. These technologies combined will redefine security, transparency, and decision-making.
