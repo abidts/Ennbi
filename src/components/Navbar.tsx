@@ -45,7 +45,7 @@ const Navbar: React.FC = () => {
   
   <div className="relative flex flex-col items-start">
     <h1 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-white/50 tracking-tight">
-      ENNBI
+      EnnBI
     </h1>
     <span className="text-sm text-white/70">SOFTWARES</span>
   </div>
