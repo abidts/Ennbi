@@ -41,10 +41,8 @@ const Navbar: React.FC = () => {
             </div>
           </a>
           */}
-          {/* <a href="#home" className="relative flex items-center space-x-3 group">
-  <img
-    src="/logo.png" // make sure the file is placed in `public/logo.png`
-    alt="ENNBI Logo"
+          <a href="#home" className="relative flex items-center space-x-3 group">
+  
     className="w-10 h-10 rounded-full object-contain"
   />
   <div className="relative flex flex-col items-start">
@@ -53,7 +51,7 @@ const Navbar: React.FC = () => {
     </h1>
     <span className="text-sm text-white/70">SOFTWARES</span>
   </div>
-</a> */}
+</a>
 
  {/* Desktop nav */}
           <div className="hidden md:flex space-x-8">
