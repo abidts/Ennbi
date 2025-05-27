@@ -23,6 +23,8 @@ const Hero: React.FC = () => {
 style={{ fontFamily: "'VT323', monospace" }}
 style={{ fontFamily: "'Black Ops One', cursive" }}
 style={{ fontFamily: "'Syncopate', sans-serif" }}
+            style={{ fontFamily: "'Cinzel', serif" }}
+
 
 
 
