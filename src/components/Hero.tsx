@@ -45,6 +45,8 @@ const Hero: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 1 }}
           >
+
+            
             We help businesses transform their ideas into powerful software solutions. Our team of experts deliver cutting-edge technology to drive your growth.
           </motion.p>
         </div>
