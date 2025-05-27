@@ -39,7 +39,7 @@ const Hero: React.FC = () => {
 
           {/* Subheading */}
           <motion.p
-            className="ext-lg md:text-2xl text-blue-500 mb-12 max-w-3xl mx-auto"
+            className="eblock text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-gray-300 to-green-100 drop-shadow-lg""
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 1 }}
