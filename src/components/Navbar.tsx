@@ -57,7 +57,7 @@ const Navbar: React.FC = () => {
           <a href="#home" className="flex items-center space-x-3 group">
   <img
     src="https://tinypic.host/images/2025/05/21/WhatsApp-Image-2025-05-21-at-9.23.13-PM.3da2m5.png"
-    alt="ENNBI Logo"
+   
     className="w-12 h-12 object-contain filter brightness-200 saturate-0 contrast-125"
   />
   <div className="flex flex-col items-start">
