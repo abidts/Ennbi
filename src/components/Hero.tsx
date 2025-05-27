@@ -16,15 +16,16 @@ const Hero: React.FC = () => {
 
       {/* Content */}
       <div className="relative container mx-auto px-4 h-screen flex flex-col items-center justify-center">
-        <div className="text-center max-w-4xl mx-auto mt-16">
+        <div className="text-center max-w-4xl mx-auto mt-24"> {/* increased margin-top here */}
           {/* Luxury Grey Title */}
           <motion.h1
-            className="text-4xl md:text-7xl font-extrabold mb-8 leading-tight"
+            className="text-4xl md:text-7xl font-extrabold leading-tight"
+            style={{ fontFamily: "'Playfair Display', serif" }} // Artistic font added
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2 }}
           >
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-gray-300 to-red-100 drop-shadow-lg">
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-gray-300 to-red-100 drop-shadow-lg mt-6">
               Transform Your Business With
             </span>
             <motion.span
@@ -39,7 +40,7 @@ const Hero: React.FC = () => {
 
           {/* Subheading */}
           <motion.p
-            className="block text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-gray-300 to-red-100 drop-shadow-lg"
+            className="block text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-gray-300 to-red-100 drop-shadow-lg mt-6"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 1 }}
@@ -48,7 +49,7 @@ const Hero: React.FC = () => {
           </motion.p>
         </div>
 
-        {/* CTA Buttons - arranged vertically and centered */}
+        {/* CTA Buttons */}
         <motion.div
           className="flex flex-col items-center gap-6 mt-auto mb-20"
           initial={{ opacity: 0, y: 20 }}
