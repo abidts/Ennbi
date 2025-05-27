@@ -43,13 +43,18 @@ style={{ fontFamily: "'Anton', sans-serif", lineHeight: 1 }}
 
           {/* Subheading */}
           <motion.p
-            className="block text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-gray-300 to-red-100 drop-shadow-lg mt-3"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4, duration: 1 }}
-          >
- We help businesses transform their ideas into powerful software solutions. Our team of experts deliver cutting-edge technology to drive your growth.
-          </motion.p>
+  className="block text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-gray-300 to-red-100 drop-shadow-lg mt-3"
+  initial={{ y: 0 }}
+  animate={{ y: [0, -10, 0] }}  // move up 10px then back
+  transition={{
+    duration: 3,               // duration of one full up-down cycle
+    repeat: Infinity,          // loop forever
+    ease: "easeInOut",
+  }}
+>
+  We help businesses transform their ideas into powerful software solutions. Our team of experts deliver cutting-edge technology to drive your growth.
+</motion.p>
+
         </div>
 
         {/* CTA Buttons */}
