@@ -41,7 +41,7 @@ const Navbar: React.FC = () => {
             </div>
           </a>
           */}
-          <a href="#home" className="relative flex items-center space-x-3 group">
+          {/* <a href="#home" className="relative flex items-center space-x-3 group">
   <img
     src="/logo.png" // make sure the file is placed in `public/logo.png`
     alt="ENNBI Logo"
@@ -53,7 +53,21 @@ const Navbar: React.FC = () => {
     </h1>
     <span className="text-sm text-white/70">SOFTWARES</span>
   </div>
+</a> */}
+          <a href="#home" className="flex items-center space-x-3 group">
+  <img
+    src="https://tinypic.host/images/2025/05/21/WhatsApp-Image-2025-05-21-at-9.23.13-PM.3da2m5.png"
+    alt="ENNBI Logo"
+    className="w-12 h-12 object-contain filter brightness-200 saturate-0 contrast-125"
+  />
+  <div className="flex flex-col items-start">
+    <h1 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-300 tracking-tight">
+      ENNBI
+    </h1>
+    <span className="text-sm text-white/70">SOFTWARES</span>
+  </div>
 </a>
+
           
           {/* Desktop nav */}
           <div className="hidden md:flex space-x-8">
