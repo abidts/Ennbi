@@ -43,8 +43,6 @@ const Navbar: React.FC = () => {
           */}
           <a href="#home" className="relative flex items-center space-x-3 group">
   
-    className="w-10 h-10 rounded-full object-contain"
-  />
   <div className="relative flex flex-col items-start">
     <h1 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-white/50 tracking-tight">
       ENNBI
