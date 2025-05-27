@@ -21,6 +21,7 @@ const Hero: React.FC = () => {
           <motion.h1
             className="text-4xl md:text-7xl font-extrabold leading-[1.1] pb-4"
 style={{ fontFamily: "'VT323', monospace" }}
+style={{ fontFamily: "'Black Ops One', cursive" }}
 
 
 
