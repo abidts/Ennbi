@@ -8,12 +8,19 @@ const Footer: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
-           <div className="flex items-center space-x-2 mb-6">
-  <span className="font-display text-lg text-white italic tracking-wide animate-float">
-    Ennbi Softwares
-  </span>
-</div>
-        
+            <div className="flex items-center space-x-3 mb-6 group">
+              <img
+                src="/logo.png"
+                alt="ENNBI Logo"
+                className="w-12 h-12 object-contain transition-transform duration-300 group-hover:scale-110"
+              />
+              <div className="flex flex-col">
+                <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-blue-600">
+                  ENNBI
+                </span>
+                <span className="text-sm text-blue-300">SOFTWARES</span>
+              </div>
+            </div>
             <p className="text-gray-400 mb-6">
               We help businesses transform their ideas into powerful software solutions with cutting-edge technology.
             </p>

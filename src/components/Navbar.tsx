@@ -31,30 +31,19 @@ const Navbar: React.FC = () => {
     }`}>
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
-          {/* <a href="#home" className="relative group">
-            <span className="absolute -inset-1 bg-gradient-to-r from-white/20 to-transparent rounded-lg blur opacity-0 group-hover:opacity-100 transition-opacity duration-500"></span>
-            <div className="relative flex flex-col items-center">
-              <h1 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-white/50 tracking-tight">
+          <a href="#home" className="relative flex items-center space-x-3 group">
+            <img
+              src="/logo.png"
+              alt="ENNBI Logo"
+              className="w-12 h-12 object-contain transition-transform duration-300 group-hover:scale-110"
+            />
+            <div className="relative flex flex-col items-start">
+              <h1 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-blue-600 tracking-tight">
                 ENNBI
               </h1>
-              <span className="text-sm text-white/70">SOFTWARES</span>
+              <span className="text-sm text-blue-300">SOFTWARES</span>
             </div>
           </a>
- */}
-<a href="#home" className="relative flex items-center space-x-3 group">
-  <img
-    src="/logo.png" // make sure the file is placed in `public/logo.png`
-    alt="ENNBI Logo"
-    className="w-10 h-10 rounded-full object-contain"
-  />
-  <div className="relative flex flex-col items-start">
-    <h1 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-white/50 tracking-tight">
-      ENNBI
-    </h1>
-    <span className="text-sm text-white/70">SOFTWARES</span>
-  </div>
-</a>
-
           
           {/* Desktop nav */}
           <div className="hidden md:flex space-x-8">
