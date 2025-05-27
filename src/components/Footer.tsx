@@ -86,13 +86,20 @@ const Footer: React.FC = () => {
                 <span className="text-gray-400">hr@ennbi.com</span>
               </li>
             </ul>
-          </div>
-        </div>
-        
-        <div className="py-6 border-t border-gray-800 text-center text-gray-400">
-          <p>&copy; {currentYear} Ennbi Softwares. All rights reserved.</p>
-        </div>
-      </div>
+       <div>
+  <div className="flex items-center space-x-2 mb-6">
+    <span className="font-display text-lg text-white italic tracking-wide animate-float">
+      Ennbi Softwares
+    </span>
+  </div>
+  <p className="text-gray-400 mb-6">
+    We help businesses transform their ideas into powerful software solutions with cutting-edge technology.
+  </p>
+  <div className="flex space-x-4">
+    <!-- your social icons remain unchanged here -->
+  </div>
+</div>
+
     </footer>
   );
 };
