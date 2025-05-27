@@ -2,16 +2,17 @@ import React from 'react';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
-  
+
   return (
     <footer className="bg-gray-900 text-white">
       <div className="container mx-auto px-4">
         <div className="py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-           <div className="flex items-center space-x-2 mb-6">
-  <span className="font-display text-lg text-white italic tracking-wide animate-float">
-    Ennbi Softwares
-  </span>
-</div>
+          <div>
+            <div className="flex items-center space-x-2 mb-6">
+              <span className="font-display text-lg text-white italic tracking-wide animate-float">
+                Ennbi Softwares
+              </span>
+            </div>
             <p className="text-gray-400 mb-6">
               We help businesses transform their ideas into powerful software solutions with cutting-edge technology.
             </p>
@@ -38,7 +39,7 @@ const Footer: React.FC = () => {
               </a>
             </div>
           </div>
-          
+
           <div>
             <h4 className="text-lg font-bold mb-6">Quick Links</h4>
             <ul className="space-y-3">
@@ -50,7 +51,7 @@ const Footer: React.FC = () => {
               <li><a href="#contact" className="text-gray-400 hover:text-white transition-colors duration-300">Contact Us</a></li>
             </ul>
           </div>
-          
+
           <div>
             <h4 className="text-lg font-bold mb-6">Services</h4>
             <ul className="space-y-3">
@@ -62,7 +63,7 @@ const Footer: React.FC = () => {
               <li><a href="#services" className="text-gray-400 hover:text-white transition-colors duration-300">Support & Maintenance</a></li>
             </ul>
           </div>
-          
+
           <div>
             <h4 className="text-lg font-bold mb-6">Contact Info</h4>
             <ul className="space-y-4">
@@ -86,21 +87,9 @@ const Footer: React.FC = () => {
                 <span className="text-gray-400">hr@ennbi.com</span>
               </li>
             </ul>
-       <div>
-  <div className="flex items-center space-x-2 mb-6">
-    <span className="font-display text-lg text-white italic tracking-wide animate-float">
-      Ennbi Softwares
-    </span>
-  </div>
-  <p className="text-gray-400 mb-6">
-    We help businesses transform their ideas into powerful software solutions with cutting-edge technology.
-  </p>
-  <div className="flex space-x-4">
-   {/* your social icons remain unchanged here */}
-
-  </div>
-</div>
-
+          </div>
+        </div>
+      </div>
     </footer>
   );
 };
