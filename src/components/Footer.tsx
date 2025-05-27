@@ -96,7 +96,8 @@ const Footer: React.FC = () => {
     We help businesses transform their ideas into powerful software solutions with cutting-edge technology.
   </p>
   <div className="flex space-x-4">
-    <!-- your social icons remain unchanged here -->
+   {/* your social icons remain unchanged here */}
+
   </div>
 </div>
 
