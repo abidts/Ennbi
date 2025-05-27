@@ -19,7 +19,7 @@ const Hero: React.FC = () => {
         <div className="text-center max-w-4xl mx-auto mt-24"> {/* increased margin-top here */}
           {/* Luxury Grey Title */}
           <motion.h1
-            className="text-4xl md:text-7xl font-extrabold leading-[1.1] pb-12"
+            className="text-4xl md:text-7xl font-extrabold leading-[1.1] pb-4"
             style={{ fontFamily: "'Playfair Display', serif" }} // Artistic font added
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
