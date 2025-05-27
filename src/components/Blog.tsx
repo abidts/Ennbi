@@ -33,7 +33,7 @@ As AI expands into embedded devices and edge computing, we're entering an age wh
   {
     id: '3',
     title: 'Next-Gen Tech: The Road Ahead',
-    image: 'https://images.pexels.com/photos/3389962/pexels-photo-3389961.jpeg?auto=compress&cs=tinysrgb&h=600&w=1200',
+    image: 'https://images.pexels.com/photos/1714208/pexels-photo-3389961.jpeg?auto=compress&cs=tinysrgb&h=600&w=1200',
     content: `The future of tech is being shaped by groundbreaking innovations. Quantum computing promises exponentially faster calculations, opening new possibilities in cryptography, chemistry, and logistics. Edge AI will enable real-time processing in smart cities and autonomous vehicles.
 
 Meanwhile, blockchain is evolving beyond cryptocurrency into secure digital identity, supply chain integrity, and decentralized finance. These technologies combined will redefine security, transparency, and decision-making.
