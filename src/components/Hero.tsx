@@ -65,7 +65,6 @@ const Hero: React.FC = () => {
     <span className="relative z-10">Explore Services</span>
     <div className="absolute inset-0 rounded-xl bg-white/5 blur-sm opacity-20 pointer-events-none"></div>
   </a>
-</div>
 
           </motion.div>
         </div>
