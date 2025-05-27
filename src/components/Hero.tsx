@@ -20,7 +20,7 @@ const Hero: React.FC = () => {
           {/* Luxury Grey Title */}
           <motion.h1
             className="text-4xl md:text-7xl font-extrabold leading-[1.1] pb-4"
-            style={{ fontFamily: "'Major Mono Display', monospace" }}
+style={{ fontFamily: "'Share Tech Mono', monospace" }}
 
 
  // Artistic font added
