@@ -13,7 +13,7 @@ const blogPosts: BlogPost[] = [
   {
     id: '1',
     title: 'The IT Revolution: Then and Now',
-    image: 'https://images.pexels.com/photos/3184436/pexels-photo-3184436.jpeg?auto=compress&cs=tinysrgb&h=600&w=1200',
+    image: 'https://images.pexels.com/photos/3182743/pexels-photo-3182743.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=1440&w=2560',
     content: `The IT revolution has reshaped the modern world in unimaginable ways. In the past, massive mainframes and limited processing power constrained computing. Today, cloud computing, microservices, and containerized deployments dominate the scene.
 
 Businesses now rely on real-time data analytics, AI-driven decisions, and decentralized workflows. This evolution has enabled agility, reduced costs, and improved customer experience. The transformation didn't occur overnight; it's the result of decades of innovation in hardware, software, and infrastructure.
