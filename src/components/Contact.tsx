@@ -201,10 +201,21 @@ const Contact: React.FC = () => {
               <option value="ai">AI/ML Solution</option>
               <option value="other">Other</option>
             </select>
-
-            <option value="6months+">6-12 Months</option>
-
-            <select
+            {/* <select
+              name="budget"
+              value={formData.budget}
+              onChange={handleChange}
+              required
+              className={`w-full p-3 border rounded text-black focus:outline-none focus:ring-2 ${
+                errors.budget ? 'border-red-500 focus:ring-red-300' : 'border-gray-300 focus:ring-blue-300'
+              }`}
+            >
+              <option value="">Select Budget Range *</option>
+              <option value="5k-50k">₹5,000 - ₹50,000</option>
+              <option value="50k-100k">₹50,000 - ₹100,000</option>
+              <option value="100k+">₹100,000+</option>
+            </select> */}
+   <select
               name="timeline"
               value={formData.timeline}
               onChange={handleChange}
