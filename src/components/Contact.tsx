@@ -227,9 +227,9 @@ const Contact: React.FC = () => {
               }`}
             >
               <option value="">Select Timeline *</option>
-              <option value="1-4weeks">1-4 Weeks</option>
-              <option value="1-3months">1-3 Months</option>
-              <option value="3months+">3+ Months</option>
+              <option value="1-6months">1-6 Months</option>
+              <option value="6months+">6-12 Months</option>
+              <option value="1+years">1+Years</option>
             </select>
 
             <textarea
