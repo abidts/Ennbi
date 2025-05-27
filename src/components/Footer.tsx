@@ -10,7 +10,7 @@ const Footer: React.FC = () => {
           <div>
             <div className="flex items-center space-x-2 mb-6">
               <span className="font-display text-lg text-white italic tracking-wide animate-float">
-                Ennbi Softwares
+                EnnBi Softwares
               </span>
             </div>
             <p className="text-gray-400 mb-6">
