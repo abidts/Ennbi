@@ -15,7 +15,7 @@ const Hero: React.FC = () => {
       </div>
 
       {/* Content */}
-      <div className="relative container mx-auto px-4 h-screen flex items-center justify-center">
+      <div className="relative container mx-auto px-4 h-screen flex flex-col items-center justify-center">
         <div className="text-center max-w-4xl mx-auto mt-16">
           {/* Luxury Grey Title */}
           <motion.h1
@@ -39,35 +39,38 @@ const Hero: React.FC = () => {
 
           {/* Subheading */}
           <motion.p
-            className="eblock text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-gray-300 to-red-100 drop-shadow-lg"
+            className="block text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-gray-300 to-red-100 drop-shadow-lg"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 1 }}
           >
             We help businesses transform their ideas into powerful software solutions. Our team of experts deliver cutting-edge technology to drive your growth.
           </motion.p>
-
-          {/* CTA Buttons */}
-          <motion.div
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
-  <a
-    href="#contact"
-    className="relative px-6 py-3 rounded-xl text-white bg-gradient-to-br from-blue-600 to-blue-800 shadow-lg hover:from-blue-500 hover:to-blue-700 transition duration-300 border border-blue-400/30 backdrop-blur-md"
-  >
-    <span className="relative z-10">Book a Free Consultation</span>
-    <div className="absolute inset-0 rounded-xl bg-white/10 blur-sm opacity-30 pointer-events-none"></div>
-  </a>
-
-  <a
-    href="#services"
-    className="relative px-6 py-3 rounded-xl text-blue-300 border border-blue-500/50 hover:text-white hover:bg-blue-900/30 transition duration-300 shadow-md backdrop-blur-md"
-  >
-    <span className="relative z-10">Explore Services</span>
-    <div className="absolute inset-0 rounded-xl bg-white/5 blur-sm opacity-20 pointer-events-none"></div>
-  </a>
-
-          </motion.div>
         </div>
+
+        {/* CTA Buttons - arranged vertically and centered */}
+        <motion.div
+          className="flex flex-col items-center gap-6 mt-auto mb-20"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.6, duration: 1 }}
+        >
+          <a
+            href="#contact"
+            className="relative px-8 py-4 rounded-xl text-white bg-gradient-to-br from-blue-600 to-blue-800 shadow-lg hover:from-blue-500 hover:to-blue-700 transition duration-300 border border-blue-400/30 backdrop-blur-md"
+          >
+            <span className="relative z-10">Book a Free Consultation</span>
+            <div className="absolute inset-0 rounded-xl bg-white/10 blur-sm opacity-30 pointer-events-none"></div>
+          </a>
+
+          <a
+            href="#services"
+            className="relative px-8 py-4 rounded-xl text-blue-300 border border-blue-500/50 hover:text-white hover:bg-blue-900/30 transition duration-300 shadow-md backdrop-blur-md"
+          >
+            <span className="relative z-10">Explore Services</span>
+            <div className="absolute inset-0 rounded-xl bg-white/5 blur-sm opacity-20 pointer-events-none"></div>
+          </a>
+        </motion.div>
       </div>
     </section>
   );
