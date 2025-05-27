@@ -40,7 +40,7 @@ const Hero: React.FC = () => {
 
           {/* Subheading */}
           <motion.p
-            className="block text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-gray-300 to-red-100 drop-shadow-lg mt-6"
+            className="block text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-gray-300 to-red-100 drop-shadow-lg mt-3"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 1 }}
