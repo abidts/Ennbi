@@ -28,7 +28,7 @@ const Hero: React.FC = () => {
               Transform Your Business With
             </span>
             <motion.span
-              className="block text-transparent bg-clip-text bg-gradient-to-r from-gray-400 via-gray-300 to-gray-100 drop-shadow-lg"
+              className="block text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-gray-300 to-red-100 drop-shadow-lg"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5, duration: 1 }}
