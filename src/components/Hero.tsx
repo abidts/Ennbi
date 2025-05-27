@@ -49,12 +49,7 @@ const Hero: React.FC = () => {
 
           {/* CTA Buttons */}
           <motion.div
-            className="flex flex-col sm:flex-row gap-6 justify-center"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.8, duration: 1 }}
-          >
-           <div className="flex flex-col sm:flex-row gap-6 justify-center">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center">
   <a
     href="#contact"
     className="relative px-6 py-3 rounded-xl text-white bg-gradient-to-br from-blue-600 to-blue-800 shadow-lg hover:from-blue-500 hover:to-blue-700 transition duration-300 border border-blue-400/30 backdrop-blur-md"
