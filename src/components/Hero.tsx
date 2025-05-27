@@ -22,6 +22,7 @@ const Hero: React.FC = () => {
             className="text-4xl md:text-7xl font-extrabold leading-[1.1] pb-4"
 style={{ fontFamily: "'VT323', monospace" }}
 style={{ fontFamily: "'Black Ops One', cursive" }}
+style={{ fontFamily: "'Syncopate', sans-serif" }}
 
 
 
