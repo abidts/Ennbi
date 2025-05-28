@@ -35,7 +35,7 @@ const Navbar: React.FC = () => {
             <img 
               src="https://i.postimg.cc/cK79ds0J/Whats-App-Image-2025-05-21-at-9-23-13-PM.png"
               alt="Ennbi Logo"
-              className="w-12 h-12 object-contain"
+              className="w-12 h-12 object-contain brightness-0 invert opacity-70"
             />
             <div className="relative flex flex-col items-start">
               <h1 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-white/50 tracking-tight">
