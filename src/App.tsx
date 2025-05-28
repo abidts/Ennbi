@@ -12,6 +12,7 @@ import Services from './components/Services';
 import WhyChooseUs from './components/WhyChooseUs';
 import Portfolio from './components/Portfolio';
 import Testimonials from './components/Testimonials';
+import Newsletter from './components/Newsletter';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Blog from './components/Blog';
@@ -27,6 +28,7 @@ const Home = () => (
     <WhyChooseUs />
     <Portfolio />
     <Testimonials />
+    <Newsletter />
     <Contact />
     <Footer />
   </>
