@@ -38,7 +38,7 @@ const Footer: React.FC = () => {
                 </svg>
               </a>
               <a 
-                href="https://instagram.com" 
+                href="https://www.instagram.com/ennbi_softwares?igsh=MTk3czA5M3pmdWk5aQ==" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="text-gray-400 hover:text-white transition-colors duration-300"
