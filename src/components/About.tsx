@@ -41,7 +41,7 @@ const About: React.FC = () => {
               Founded in 2022, EnnBi Softwares has grown from a small team of passionate developers into a full-service software development company trusted by businesses worldwide.
             </p>
             <p className="text-gray-700 mb-6">
-              Our team combines technical excellence with industry expertise to deliver innovative software solutions that solve complex business challenges. We're committed to quality, transparency, and creating lasting partnerships with our clients.
+              Our team combines technical excellence with industry expertise to deliver innovative software solutions that solve complex business challenges. We're committed to quality, transparency, and creating lasting partnerships with our clients. 
             </p>
             <p className="text-gray-700 mb-6">
               From startups to enterprise organizations, we work with businesses of all sizes across industries including healthcare, finance, retail, and education.
