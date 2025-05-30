@@ -3,7 +3,10 @@ import { motion } from 'framer-motion';
 
 const Hero: React.FC = () => {
   return (
-    <section id="home" className="relative min-h-screen overflow-hidden bg-gray-900">
+<section
+  id="home"
+  className="relative min-h-screen overflow-hidden bg-gray-900 pt-24 md:pt-32"
+>
       {/* Background effects */}
       <div className="absolute inset-0 bg-gradient-radial from-primary-500/20 to-transparent"></div>
       <div className="absolute inset-0 overflow-hidden">
