@@ -28,7 +28,7 @@ const Navbar: React.FC = () => {
   return (
     <nav className={`fixed w-full z-50 transition-all duration-500 ${
       isScrolled ? 'py-4 bg-black/80 backdrop-blur-lg' : 'py-6'
-    }`}>
+    } mb-16`}>
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
           <a href="#home" className="relative flex items-center space-x-3 group">
@@ -37,12 +37,9 @@ const Navbar: React.FC = () => {
               alt="Ennbi Logo"
               className="w-12 h-12 object-contain brightness-0 invert opacity-70"
             />
-            <div className="relative flex flex-col items-start">
-              <h1 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-white/50 tracking-tight">
-                EnnBI
-              </h1>
-              <span className="text-sm text-white/70">SOFTWARES</span>
-            </div>
+            <h1 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-white/50 tracking-tight">
+              EnnBi
+            </h1>
           </a>
 
           {/* Desktop nav */}
