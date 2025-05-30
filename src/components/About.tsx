@@ -37,8 +37,6 @@ const About: React.FC = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               About <span className="text-blue-900">EnnBi Softwares</span>
             </h2>
-            <div className="h-1 w-20 bg-blue-500 mb-0"></div>
-
             <p className="text-gray-700 mb-6">
               Welcome to <strong>EnnBi</strong> — where innovation meets precision. Something exciting is in the works! Our developers are fine-tuning every pixel and perfecting every line of code to create a digital experience that reflects our commitment to excellence. Just like our custom solutions, this platform is being built to inspire, empower, and elevate your business. Stay tuned—your next big idea might just start here!
             </p>
