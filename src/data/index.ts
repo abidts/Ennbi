@@ -99,20 +99,20 @@ export const testimonials: TestimonialType[] = [
     name: "Mr Abid",
     position: "Business Owner",
     company: "Heritage Craft.",
-    quote: "Ennbi Softwares delivered beyond our expectations. Their expertise in cloud solutions has transformed our operations and improved efficiency by 40%.",
+    quote: "EnnBi Softwares delivered beyond our expectations. Their expertise in cloud solutions has transformed our operations and improved efficiency by 40%.",
   },
   {
     id: 2,
     name: "Adnan",
     position: " Director",
-    company: "Logisco ",
-    quote: "The mobile application developed by Ennbi has received outstanding feedback from our customers and significantly improved our user engagement metrics.",
+    company: "Logisco Courier Service",
+    quote: "The mobile application developed by EnnBi has received outstanding feedback from our customers and significantly improved our user engagement metrics.",
   },
   {
     id: 3,
     name: "Kamran Lone",
     position: "MD",
     company: "M Studio",
-    quote: "Working with Ennbi Softwares was a game-changer for our business. Their AI-driven solution has helped us increase sales by 35% in just six months.",
+    quote: "Working with EnnBi Softwares was a game-changer for our business. Their AI-driven solution has helped us increase sales by 35% in just six months.",
   }
 ];
