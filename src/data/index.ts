@@ -74,7 +74,7 @@ export const projects: ProjectType[] = [
     id: 4,
     title: "Smart Restaurant System",
     description: "An innovative food ordering solution featuring self-service kiosks, mobile ordering, and kitchen display systems for streamlined restaurant operations.",
-    image: "https://images.pexels.com/photos/2280571/pexels-photo-4199524.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    image: "https://images.pexels.com/photos/4199524/pexels-photo-4199524.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     tags: ["POS", "Kiosk", "Mobile Ordering", "Real-time"]
   },
   {
