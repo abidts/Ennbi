@@ -24,6 +24,7 @@ const Contact: React.FC = () => {
   const [errors, setErrors] = useState<Partial<FormData>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
+  const [submitError, setSubmitError] = useState('');
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
@@ -49,7 +50,6 @@ const Contact: React.FC = () => {
     if (!formData.phone.trim()) newErrors.phone = 'Phone is required';
     if (!formData.message.trim()) newErrors.message = 'Message is required';
     if (!formData.projectType) newErrors.projectType = 'Project type is required';
-    if (!formData.budget) newErrors.budget = 'Budget range is required';
     if (!formData.timeline) newErrors.timeline = 'Timeline is required';
 
     setErrors(newErrors);
@@ -58,7 +58,12 @@ const Contact: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!validate()) return;
+    setSubmitError('');
+
+    if (!validate()) {
+      setSubmitError('Please fill in all required fields correctly.');
+      return;
+    }
 
     setIsSubmitting(true);
     try {
@@ -73,6 +78,7 @@ const Contact: React.FC = () => {
 
       if (response.ok) {
         setSubmitSuccess(true);
+        setSubmitError('');
         setFormData({
           name: '',
           email: '',
@@ -84,11 +90,12 @@ const Contact: React.FC = () => {
         });
         setTimeout(() => setSubmitSuccess(false), 5000);
       } else {
-        alert('Failed to submit. Please try again later.');
+        const errorData = await response.json().catch(() => ({}));
+        setSubmitError(errorData.error || 'Failed to submit. Please try again later.');
       }
     } catch (error) {
       console.error('Error submitting form:', error);
-      alert('Something went wrong. Please try again.');
+      setSubmitError('Network error. Please check your connection and try again.');
     } finally {
       setIsSubmitting(false);
     }
@@ -148,59 +155,78 @@ const Contact: React.FC = () => {
               </div>
             )}
 
-            <input
-              type="text"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              required
-              className={`w-full p-3 border rounded text-black focus:outline-none focus:ring-2 ${
-                errors.name ? 'border-red-500 focus:ring-red-300' : 'border-gray-300 focus:ring-blue-300'
-              }`}
-              placeholder="Full Name *"
-            />
+            {submitError && (
+              <div className="bg-red-100 text-red-800 p-4 rounded-lg">
+                <p className="font-medium">Error</p>
+                <p>{submitError}</p>
+              </div>
+            )}
 
-            <input
-              type="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              required
-              className={`w-full p-3 border rounded text-black focus:outline-none focus:ring-2 ${
-                errors.email ? 'border-red-500 focus:ring-red-300' : 'border-gray-300 focus:ring-blue-300'
-              }`}
-              placeholder="Email Address *"
-            />
+            <div>
+              <input
+                type="text"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                required
+                className={`w-full p-3 border rounded text-black focus:outline-none focus:ring-2 ${
+                  errors.name ? 'border-red-500 focus:ring-red-300' : 'border-gray-300 focus:ring-blue-300'
+                }`}
+                placeholder="Full Name *"
+              />
+              {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name}</p>}
+            </div>
 
-            <input
-              type="tel"
-              name="phone"
-              value={formData.phone}
-              onChange={handleChange}
-              required
-              className={`w-full p-3 border rounded text-black focus:outline-none focus:ring-2 ${
-                errors.phone ? 'border-red-500 focus:ring-red-300' : 'border-gray-300 focus:ring-blue-300'
-              }`}
-              placeholder="Phone Number *"
-            />
+            <div>
+              <input
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                required
+                className={`w-full p-3 border rounded text-black focus:outline-none focus:ring-2 ${
+                  errors.email ? 'border-red-500 focus:ring-red-300' : 'border-gray-300 focus:ring-blue-300'
+                }`}
+                placeholder="Email Address *"
+              />
+              {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
+            </div>
 
-            <select
-              name="projectType"
-              value={formData.projectType}
-              onChange={handleChange}
-              required
-              className={`w-full p-3 border rounded text-black focus:outline-none focus:ring-2 ${
-                errors.projectType ? 'border-red-500 focus:ring-red-300' : 'border-gray-300 focus:ring-blue-300'
-              }`}
-            >
-              <option value="">Select Project Type *</option>
-              <option value="website">Website Development</option>
-              <option value="mobile">Mobile App Development</option>
-              <option value="ecommerce">E-Commerce Solution</option>
-              <option value="custom">Custom Software</option>
-              <option value="ai">AI/ML Solution</option>
-              <option value="other">Other</option>
-            </select>
+            <div>
+              <input
+                type="tel"
+                name="phone"
+                value={formData.phone}
+                onChange={handleChange}
+                required
+                className={`w-full p-3 border rounded text-black focus:outline-none focus:ring-2 ${
+                  errors.phone ? 'border-red-500 focus:ring-red-300' : 'border-gray-300 focus:ring-blue-300'
+                }`}
+                placeholder="Phone Number *"
+              />
+              {errors.phone && <p className="text-red-500 text-sm mt-1">{errors.phone}</p>}
+            </div>
+
+            <div>
+              <select
+                name="projectType"
+                value={formData.projectType}
+                onChange={handleChange}
+                required
+                className={`w-full p-3 border rounded text-black focus:outline-none focus:ring-2 ${
+                  errors.projectType ? 'border-red-500 focus:ring-red-300' : 'border-gray-300 focus:ring-blue-300'
+                }`}
+              >
+                <option value="">Select Project Type *</option>
+                <option value="website">Website Development</option>
+                <option value="mobile">Mobile App Development</option>
+                <option value="ecommerce">E-Commerce Solution</option>
+                <option value="custom">Custom Software</option>
+                <option value="ai">AI/ML Solution</option>
+                <option value="other">Other</option>
+              </select>
+              {errors.projectType && <p className="text-red-500 text-sm mt-1">{errors.projectType}</p>}
+            </div>
             {/* <select
               name="budget"
               value={formData.budget}
@@ -215,32 +241,38 @@ const Contact: React.FC = () => {
               <option value="50k-100k">₹50,000 - ₹100,000</option>
               <option value="100k+">₹100,000+</option>
             </select> */}
-   <select
-              name="timeline"
-              value={formData.timeline}
-              onChange={handleChange}
-              required
-              className={`w-full p-3 border rounded text-black focus:outline-none focus:ring-2 ${
-                errors.timeline ? 'border-red-500 focus:ring-red-300' : 'border-gray-300 focus:ring-blue-300'
-              }`}
-            >
-              <option value="">Select Timeline *</option>
-              <option value="1-6months">1-6 Months</option>
-              <option value="6months+">6-12 Months</option>
-              <option value="1+years">1+Years</option>
-            </select>
+            <div>
+              <select
+                name="timeline"
+                value={formData.timeline}
+                onChange={handleChange}
+                required
+                className={`w-full p-3 border rounded text-black focus:outline-none focus:ring-2 ${
+                  errors.timeline ? 'border-red-500 focus:ring-red-300' : 'border-gray-300 focus:ring-blue-300'
+                }`}
+              >
+                <option value="">Select Timeline *</option>
+                <option value="1-6months">1-6 Months</option>
+                <option value="6months+">6-12 Months</option>
+                <option value="1+years">1+Years</option>
+              </select>
+              {errors.timeline && <p className="text-red-500 text-sm mt-1">{errors.timeline}</p>}
+            </div>
 
-            <textarea
-              name="message"
-              value={formData.message}
-              onChange={handleChange}
-              required
-              rows={5}
-              className={`w-full p-3 border rounded text-black focus:outline-none focus:ring-2 ${
-                errors.message ? 'border-red-500 focus:ring-red-300' : 'border-gray-300 focus:ring-blue-300'
-              }`}
-              placeholder="Tell us about your project requirements *"
-            />
+            <div>
+              <textarea
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                required
+                rows={5}
+                className={`w-full p-3 border rounded text-black focus:outline-none focus:ring-2 ${
+                  errors.message ? 'border-red-500 focus:ring-red-300' : 'border-gray-300 focus:ring-blue-300'
+                }`}
+                placeholder="Tell us about your project requirements *"
+              />
+              {errors.message && <p className="text-red-500 text-sm mt-1">{errors.message}</p>}
+            </div>
 
             <button
               type="submit"
